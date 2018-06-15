@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/book-libriry-ims/book-libriry-ims.iml" filepath="$PROJECT_DIR$/book-libriry-ims/book-libriry-ims.iml" />
+      <module fileurl="file://$PROJECT_DIR$/book-libriry-ims-page/book-libriry-ims-page.iml" filepath="$PROJECT_DIR$/book-libriry-ims-page/book-libriry-ims-page.iml" />
+      <module fileurl="file://$PROJECT_DIR$/book-libriry-ims/book-libriry-ims-server.iml" filepath="$PROJECT_DIR$/book-libriry-ims/book-libriry-ims-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/homework.iml" filepath="$PROJECT_DIR$/.idea/homework.iml" />
     </modules>
   </component>
