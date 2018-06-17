@@ -1,6 +1,6 @@
 import React from "react"
 
-import {Layout,Affix,Row,Col} from "antd"
+import {Layout,Affix} from "antd"
 
 import NormalHeader from "./NomalHeader"
 import SearchInput from "./SearchInput"
