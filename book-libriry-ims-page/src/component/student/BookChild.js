@@ -3,42 +3,51 @@ import React from "react"
 import { Link } from "react-router-dom";
 //const {Meta} = Card
 
-const BookChild=(props) => {
+export default class BookChild extends React.Component{
 
-    const imgPathPre="/imgs/"
+    state={
+        book:this.props.book
+    }
 
-    const BaseDiv=()=>(
-        <div>
-            <Link to={"/intro"}  style={{height:"172px"}}>
-                <img
-                    style={{width:"120px",height:"172px"}}
-                    alt={props.book.index}
-                    src={imgPathPre + props.book.index +".jpg"}/>
-            </Link>
+    componentWillReceiveProps(nextProps){
+        this.setState({
+            book:nextProps.book
+        })
+    }
 
-            <Link style={{fontSize:"13px"}}
-                  to={"/intro"} >{props.book.name}</Link><br/>
-        </div>
-    );
+    render(){
 
-    const BookIfExistAuthorDiv =()=> {
-        if (props.book.author!==undefined){
-            return (<span style={{fontSize:"12px"}}>{props.book.author}</span>)
-        } else {
-            return ""
-        }
-    };
+        const book = this.state.book;
 
+        const BaseDiv=()=>(
+            <div>
+                <Link to={"/intro"}  style={{height:"172px"}}>
+                    <img
+                        style={{width:"120px",height:"172px"}}
+                        alt={book.index}
+                        src={"http://localhost:8080/img/"+book.index}/>
+                </Link>
+                <Link style={{fontSize:"13px"}}
+                      to={"/intro"} >{book.name}</Link><br/>
+            </div>
+        );
 
+        const BookIfExistAuthorDiv =()=> {
+            if (book.author!==undefined){
+                return (<span style={{fontSize:"12px"}}>{book.author}</span>)
+            } else {
+                return ""
+            }
+        };
 
-    return (
-        <div style={{width:"115px",height:"230px"}}>
-            <BaseDiv/>
-            <BookIfExistAuthorDiv/>
-        </div>
-    )
-
+        return (
+            <div style={{width:"115px",height:"230px"}}>
+                <BaseDiv/>
+                <BookIfExistAuthorDiv/>
+            </div>
+        )
+    }
 
 
 };
-export default BookChild
+

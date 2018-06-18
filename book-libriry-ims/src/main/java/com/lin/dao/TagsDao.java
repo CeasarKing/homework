@@ -9,6 +9,12 @@ import java.util.List;
 @Mapper
 public interface TagsDao {
 
+    @Select("SELECT tag_id from book_info_to_tags where info_id=#{bid}")
+    List<Integer> queryTagsByBookId(@Param("bid") Integer bid);
+
+    @Select("SELECT * FROM book_tags")
+    @Results({@Result(column = "parent_id",property = "parentId")})
+    List<Tag> queryAllTags();
 
     /**
      * 为了准备数据使用的一次性代码

@@ -5,6 +5,17 @@ import java.util.Map;
 
 public class Tag {
 
+    public final static Map<Integer,Tag> TAGS_MAP=new HashMap<>();
+    private static int modCount=0;
+    public synchronized static void setTags(Map<Integer,Tag> map){
+        modCount++;
+        if (modCount>1){
+            throw new RuntimeException("TAGS_MAP只能赋值一次");
+        }else {
+            TAGS_MAP.putAll(map);
+        }
+    }
+
     private int id;
     private String category;
     private int parentId;
@@ -18,7 +29,14 @@ public class Tag {
         this.parentId = parentId;
     }
 
-
+    @Override
+    public String toString() {
+        return "Tag{" +
+                "id=" + id +
+                ", category='" + category + '\'' +
+                ", parentId=" + parentId +
+                '}';
+    }
 
     public int getId() {
         return id;

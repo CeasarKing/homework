@@ -26,8 +26,8 @@ public class Book {
     private String ISBN;
 
 
-    //拥有的标签
-    private String tags;
+    //拥有的标签  Integer为tId
+    private List<Integer> tags;
 
     //豆瓣评分
     private Double averageRank;
@@ -85,11 +85,11 @@ public class Book {
         return this;
     }
 
-    public String getTags() {
+    public List<Integer> getTags() {
         return tags;
     }
 
-    public Book setTags(String tags) {
+    public Book setTags(List<Integer> tags) {
         this.tags = tags;
         return this;
     }

@@ -19,6 +19,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.io.*;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.sql.SQLException;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -83,7 +85,7 @@ public class ScrawForExecuteOnce {
         return map;
     }
 
-    @Autowired TagsDao tagsDao;
+   TagsDao tagsDao;
 
     @Test
     public void insertCategoryIntoDB() throws FileNotFoundException {
@@ -418,17 +420,120 @@ public class ScrawForExecuteOnce {
     public void testInfoMapTag(){
         List<Book> books = dao.queryAllIdAndTag();
         for (Book book:books){
-            String tagStr=book.getTags();
+            List<Integer> tagStr=book.getTags();
             if (tagStr!=null){
+                /*
+                被牺牲的代码
                 String[]tags=tagStr.split("-");
                 for (String s:tags){
                     int id=tagsDao.queryIdByName(s);
                     tagsDao.updateChildUp1(s);
                     tagsDao.insertBookMapTag(book.getbId(),id);
-
                 }
+                */
             }
         }
+    }
+
+    //获取图书的图片资源
+    @Test
+    public void testGetImg() throws IOException {
+        String path="F:\\file\\json";
+        File file=new File(path);
+        File[]files=file.listFiles(pathname -> !pathname.toString().endsWith(".json"));
+
+        List<String> errNames=new ArrayList<>();
+        int errCount=0;
+
+        Map<String,Book> map=new HashMap<>();
+
+        for (File f:files){
+            StringBuilder jsonStr=new StringBuilder();
+            new BufferedReader(new FileReader(f)).lines().
+                    collect(Collectors.toList()).forEach(s -> jsonStr.append(s));
+
+            Book book=new Gson().fromJson(jsonStr.toString(),Book.class);
+            System.out.println(book);
+
+            /**
+             *  处理 简介大字符串 的数据 的存储
+             */
+
+            String name = book.getBookName();
+            List<String> bookIntro = book.getBookIntro();
+            List<String> authorIntro =book.getAuthorIntro();
+            map.put(name,new Book().setBookName(name).setBookIntro(bookIntro).setAuthorIntro(authorIntro));
+            /*
+              获取图片资源
+            try {
+                URL url = new URL(book.getImgSrc());
+
+                InputStream br = url.openStream();
+                FileOutputStream fos=new FileOutputStream("F:\\file\\img\\"+book.getBookName()+".jpg");
+                byte[]bytes=new byte[1024];
+
+                int len = 0;
+                while ((len=br.read(bytes,0,1024))>0){
+                    fos.write(bytes,0,len);
+                }
+
+                br.close();
+                fos.close();
+
+            }catch (IOException e){
+                errCount++;
+                if (errCount>5){
+                    System.out.println(errNames);
+                    System.out.println(f.getPath());
+                    return;
+                }
+                e.printStackTrace();
+                errNames.add(book.getBookName());
+            }*/
+        }
+        String jsonStr=new Gson().toJson(map);
+        BufferedWriter bw=new BufferedWriter(new FileWriter("intro.txt"));
+        bw.write(jsonStr);
+        bw.close();
+    }
+
+    //修改图片的名字
+    @Test
+    public void testModImgName(){
+        String path="F:\\file\\img\\";
+        File file=new File(path);
+        File []files=file.listFiles();
+
+        List<String> books=new ArrayList<>();
+        for (File f:files){
+
+            try {
+                String name=f.getName();
+                name=name.substring(0,name.length()-4);
+
+                System.out.println(name);
+
+                dao.updateImg(""+name,"F:\\file\\img\\"+name+".jpg");
+
+            }catch (Exception e){
+                e.printStackTrace();
+                books.add(f.getName());
+            }
+
+        }
+
+        System.out.println(books);
+    }
+
+    //图片路径插入数据库
+    @Test
+    public void testInsert(){
+
+    }
+
+    @Test
+    public void saveIntro(){
+
     }
 
 }
