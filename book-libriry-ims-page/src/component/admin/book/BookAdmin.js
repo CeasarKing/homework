@@ -265,7 +265,6 @@ export default class BookAdmin extends React.Component{
                             this.nameInput.focus()
                     })
                 },
-                onFilter:this.state.onNameFilter
             },
             {
                 title:"作者",
