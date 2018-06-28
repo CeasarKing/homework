@@ -2,6 +2,8 @@ import React from "react"
 import {List,Popover}from "antd"
 import BookChild from "./BookChild";
 import BookPopover from "./BookPopover"
+import BookIntroModal from "./BookIntroModal";
+import $ from "jquery"
 
 const intro=[
     "大学刚毕业的热血青年张云松，怀着对事业的一腔热血，进入了一家广告公司工作。然而，从未接触过的领域、公司复杂的人际关系、微薄的薪水和生活的重压，一点点蚕食着他的少年意气，只有在出差前往小镇望花镇的时候，他才能收获一些难得的平静。\n",
@@ -13,27 +15,17 @@ export default class ShowBookList extends React.Component{
     constructor(props){
         super()
         const data=this.prepareData(props.books);
-        this.state={
-            books:data
+        const popOver=[]
+        for (let i = 0;i<data.length;i++){
+            popOver.push(false)
         }
-    }
 
-    prepareData(books){
-        const theSomeBooks=books
-        let retBooks=[]
-        theSomeBooks.forEach(v=>{
-            let book={
-                index:v.bId,
-                img:v.imgSrc,
-                name:v.bookName,
-                author:v.author,
-                intro:v.bookIntro,
-                publish:v.publicWork,
-                publicTime:v.publicTime
-            }
-            retBooks.push(book)
-        })
-        return retBooks
+        this.state={
+            books:data,
+            modalVisible:false,
+            modalItem:null,
+            popOverVisible:popOver
+        }
     }
 
     componentWillReceiveProps(nextProps){
@@ -43,30 +35,97 @@ export default class ShowBookList extends React.Component{
         })
     }
 
+    prepareData(books){
+        const theSomeBooks=books;
+        let retBooks=[];
+        theSomeBooks.forEach(v=>{
+            let book={
+                index:v.bId,
+                img:v.imgSrc,
+                name:v.bookName,
+                author:v.author,
+                intro:v.bookIntro,
+                publish:v.publicWork,
+                publicTime:v.publicTime
+            };
+            retBooks.push(book)
+        });
+        return retBooks
+    }
+
+    handleClickItem=(bname)=>{
+        let modalItem = null;
+        $.ajax({
+            url:"http://localhost:8080/one",
+            data:{
+                bookName:bname
+            },
+            async:false,
+            success:(resp)=>{
+                modalItem = JSON.parse(resp)
+            }
+        });
+
+
+        const popOver=this.state.popOverVisible;
+        for (let i=0;i<popOver.length;i++)
+            popOver[i]=false
+
+        this.setState({
+            modalVisible:true,
+            modalItem:modalItem,
+            popOverVisible:popOver
+        })
+    };
+
+    handleOk=()=>{
+        this.setState({
+            modalVisible:false
+        })
+    };
+
+    handleCancel=()=>{
+        this.setState({
+            modalVisible:false
+        })
+    };
+
+    handlePopMouseEnterOrOut=(key)=>{
+        const popOverVisible=this.state.popOverVisible;
+        popOverVisible[key]=!popOverVisible[key];
+        this.setState({
+            popOverVisible:popOverVisible
+        })
+    };
 
     render(){
         let itemPos=-1;
         return(
-            <List
-                grid={{gutter:0,column:5}}
-                dataSource={this.state.books}
-                renderItem={item=>{
+            <div>
+                <List
+                    grid={{gutter:0,column:5}}
+                    dataSource={this.state.books}
+                    renderItem={(item,index)=>{
+                        if (itemPos===5)
+                            itemPos=0;
+                        else
+                            itemPos++;
 
-                    if (itemPos===5)
-                        itemPos=0;
-                    else
-                        itemPos++;
+                        return(<Popover content={<BookPopover book={item}/>}
+                                        trigger={"hover"}
+                                        mouseEnterDelay={1}
+                                        placement={itemPos>2?"left":"right"}
+                        >
+                            <List.Item onClick={this.handleClickItem.bind(this,item.name)}
+                                       key={item.index}
+                            >
+                                <BookChild  book={item}/>
+                            </List.Item>
+                        </Popover>)}}>
 
-                    return(<Popover content={<BookPopover book={item}/>}
-                             trigger={"hover"}
-                             mouseEnterDelay={1}
-                             placement={itemPos>2?"left":"right"}>
-                        <List.Item>
-                            <BookChild  book={item}/>
-                        </List.Item>
-                    </Popover>)}}>
-
-            </List>
+                </List>
+                <BookIntroModal item={this.state.modalItem} onOk={this.handleOk} onCancel={this.handleCancel} visible={this.state.modalVisible}/>
+            </div>
         )
     }
 }

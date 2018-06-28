@@ -16,12 +16,11 @@ export default class StudentHomeBody extends React.Component{
     constructor(props){
         super();
         const booksData = this.preGetData();
-
         this.state={
             scrollH:"200px",
             divStyle:undefined,
             booksData:booksData,
-            books:booksData.books.slice(0,50)
+            books:booksData.books
         };
     }
 
@@ -30,6 +29,10 @@ export default class StudentHomeBody extends React.Component{
         let resData=null
         $.ajax({
             url:"http://localhost:8080/infos",
+            data:{
+                limit:50,
+                needTags:true
+            },
             method:"get",
             async:false,
             success: (data)=> {
@@ -38,12 +41,6 @@ export default class StudentHomeBody extends React.Component{
             }
         });
         return resData;
-    };
-
-    onClickCategory=(height)=>{
-        this.setState({
-            scrollH:height
-        })
     };
 
     gethw=(h,l)=>{
@@ -55,30 +52,67 @@ export default class StudentHomeBody extends React.Component{
         })
     };
 
-    onCategorySelection=(selectArr)=>{
+    onClickCategoryHeight=(height)=>{
+        this.setState({
+            scrollH:height
+        })
+    };
+
+    onClickCategoryItem=(val)=>{
+
+        console.log(val)
+
+        $.ajax({
+            url:"http://localhost:8080/infos",
+            method:"get",
+            data:{
+                cateJsonStr:val,
+                limit:50
+            },
+            success: (resp) =>{
+                this.setState({
+                    books:JSON.parse(resp).books
+                })
+            }
+
+        })
+    };
+
+    //当左边的分类list被点击的回掉函数
+    onSelectCategory=(selectArr)=>{
         let count=0;
         const data = this.state.booksData.books;
         let newData = []
-        for (let i =0;i<data.length && count<50;i++){
-            let tags = data[i].tags;
-            for (let j in tags){
-                const id = tags[j];
-                let flag=false
-                for (let k in selectArr){
-                    if (id==selectArr[k]){
-                        newData.push(data[i])
-                        count++;
-                        flag=true;
-                        break
-                    }
-                }
-                if (flag)
-                    break
-            }
-        }
 
-        this.setState({
-            books:newData
+        const tagIds=JSON.stringify(selectArr)
+        $.ajax("http://localhost:8080/infos",{
+            method:"get",
+            data:{
+                tagIds:tagIds,
+                limit:50,
+                needTags:false
+            },
+            success:(resp)=>{
+                this.setState({
+                    books:JSON.parse(resp).books
+                })
+            }
+        })
+    };
+
+    //当点击搜索的时候的回调函数
+    onInputSearch=(search)=>{
+        $.ajax({
+            url:"http://localhost:8080/infos",
+            method:"get",
+            data:{
+                bookName:search
+            },
+            success:(resp)=>{
+                this.setState({
+                    books:JSON.parse(resp).books
+                })
+            }
         })
     };
 
@@ -87,12 +121,12 @@ export default class StudentHomeBody extends React.Component{
         return(
             <div style={this.state.divStyle===undefined?{}:this.state.divStyle}>
                 <NormalHeader gethw={this.gethw}/>
-                <SearchInput/>
+                <SearchInput onSearch={this.onInputSearch}/>
 
                 <Layout style={{background:"#fff"}}>
 
                     <Header style={{background:"#Fff"}}>
-                        <CategorySearch onList={this.onClickCategory}/>
+                        <CategorySearch onClickItem={this.onClickCategoryItem} onList={this.onClickCategoryHeight}/>
                     </Header>
 
                     <Content style={{marginTop:this.state.scrollH}}>
@@ -100,13 +134,13 @@ export default class StudentHomeBody extends React.Component{
                             <Sider theme={"light"} style={{background:"#fff"}}>
                                     {//--左边的分类列表-->
                                          }
-                                <Affix> <CategoryList tags={this.state.booksData.tags} onSelect={this.onCategorySelection}/> </Affix>
+                                <Affix> <CategoryList tags={this.state.booksData.tags} onSelect={this.onSelectCategory}/> </Affix>
                             </Sider>
                             <Content style={{background:"#Fff"}}>
                                     {//--右边的显示列表-->
                                          }
                                 <div >
-                                    <ShowBookList books={this.state.books}/>
+                                    <ShowBookList books={this.state.books} />
                                 </div>
                             </Content>
                         </Layout>

@@ -1,6 +1,5 @@
-package com.lin.service;
+package com.lin.dao;
 
-import com.google.gson.Gson;
 import com.lin.MainApplication;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -8,18 +7,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import java.util.Map;
-
-@RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = MainApplication.class)
-public class QueryBookInfoServiceTest {
+@RunWith(SpringJUnit4ClassRunner.class)
+public class BookIntroDaoTest {
 
-    @Autowired private QueryBookInfoService service;
+    @Autowired
+    private BookIntroDao bookIntroDao;
 
     @Test
-    public void testGetBooksAndTags(){
-        Map map=service.getAllInfosAndTags();
-        System.out.println(new Gson().toJson(map));
+    public void test(){
+        System.out.println(bookIntroDao.queryBookIntros(1653665483));
+        System.out.println(bookIntroDao.queryAuthorIntros(1653665483));
     }
 
 }

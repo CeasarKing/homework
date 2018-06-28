@@ -2,6 +2,7 @@ package com.once;
 
 import com.lin.beans.Book;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -37,20 +38,20 @@ public class ForJson {
 
             Double avergeRank=0.0;
             int rankNum=0;
-            Double[]allRank=null;
+            List<Double>allRank=null;
 
             if (!ranks[1].equals("评价人数不足")){
                 avergeRank=Double.valueOf(ranks[1]);
 
                 rankNum=Integer.valueOf(ranks[2].substring(0,ranks[2].length()-3));
 
-                allRank = new Double[5];
+                allRank = new ArrayList<>();
                 String r=ranks[ranks.length-1];
-                allRank[0]=Double.valueOf(r.substring(0,r.length()-1));
+                allRank.add(Double.valueOf(r.substring(0,r.length()-1)));
 
                 for (int i=1;i<5;i++){
                     String scoreStr=rank.get(i).split(" ")[1];
-                    allRank[i]= Double.valueOf(scoreStr.substring(0,scoreStr.length()-1));
+                    allRank.add(Double.valueOf(scoreStr.substring(0,scoreStr.length()-1)));
                 }
             }
 

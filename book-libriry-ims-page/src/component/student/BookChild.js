@@ -18,17 +18,16 @@ export default class BookChild extends React.Component{
     render(){
 
         const book = this.state.book;
-
         const BaseDiv=()=>(
             <div>
-                <Link to={"/intro"}  style={{height:"172px"}}>
+                <a   style={{height:"172px"}}>
                     <img
                         style={{width:"120px",height:"172px"}}
                         alt={book.index}
                         src={"http://localhost:8080/img/"+book.index}/>
-                </Link>
-                <Link style={{fontSize:"13px"}}
-                      to={"/intro"} >{book.name}</Link><br/>
+                </a>
+                <a style={{fontSize:"13px"}}
+                       >{book.name}</a><br/>
             </div>
         );
 

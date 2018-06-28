@@ -7,6 +7,8 @@ import com.lin.beans.Book;
 import com.lin.beans.Tag;
 import com.lin.dao.BookDao;
 import com.lin.dao.TagsDao;
+import com.lin.service.QueryBookInfoService;
+import com.mysql.jdbc.Blob;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -18,9 +20,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import javax.sql.DataSource;
 import java.io.*;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -30,9 +35,7 @@ import java.util.stream.Collectors;
 @RunWith(SpringJUnit4ClassRunner.class)
 public class ScrawForExecuteOnce {
 
-
     //为了准备数据   一步一步来  从爬取到存入数据库  弄得好烦
-
     //使用简单的 Jsoup 获得 各种分类 图书的信息
     @Test
     public void getCateList() throws IOException {
@@ -388,11 +391,14 @@ public class ScrawForExecuteOnce {
 
     //有的字符串本来就带有 ' 字符  稍微不好处理
     @Test
-    public void testReadFromJson() throws FileNotFoundException {
+    public void testReadFromJson() throws FileNotFoundException, SQLException {
         String jsonFile="f:\\file/json/";
         File file[]=new File(jsonFile).listFiles(pathname -> pathname.toString().endsWith(".dat"));
 
         List<String> errBooks=new ArrayList<>();
+        java.sql.Connection connection=dataSource.getConnection();
+        PreparedStatement ps=connection.
+                prepareStatement("UPDATE book_info SET author_intro=? WHERE bname=?");
         for (File f:file){
             List<String> lins=new BufferedReader(new FileReader(f)).lines().collect(Collectors.toList());
             StringBuilder sb=new StringBuilder();
@@ -400,18 +406,22 @@ public class ScrawForExecuteOnce {
             String jsonStr=sb.toString();
 
             ForJson json=new Gson().fromJson(jsonStr,ForJson.class);
-            if (dao.queryBookCountByName(json.bookName)==0){
-                try {
-                    dao.insertBooks(json.toBook());
-                }catch (Exception sqlE){
-                    sqlE.printStackTrace();
-                    errBooks.add(json.getBookName());
-                }
-            }
+
+            System.out.println(json);
+
+            List<String>authorIntro = json.authorIntro;
+            StringBuilder sb2=new StringBuilder();
+            authorIntro.forEach(s -> sb2.append(s).append("\n"));
+            StringReader reader=new StringReader(sb2.toString());
+
+            ps.setCharacterStream(1,reader);
+            ps.setString(2,json.bookName);
+
+            ps.execute();
+
         }
 
-        System.out.println(errBooks.size());
-        System.out.println(errBooks);
+        
 
     }
 
@@ -531,9 +541,69 @@ public class ScrawForExecuteOnce {
 
     }
 
-    @Test
-    public void saveIntro(){
+
+    @Autowired private DataSource dataSource;
+    @Autowired private QueryBookInfoService queryBookInfoService;
+    @Test public void saveIntro() throws SQLException {
+
+        List<Book> books= (List<Book>) queryBookInfoService.getAllInfosAndTags().get("books");
+        java.sql.Connection connection=dataSource.getConnection();
+
+        PreparedStatement ps = connection.prepareStatement("UPDATE BOOK_INFO SET intro = ? WHERE bname = ?");
+        List<String> errList=new ArrayList<>();
+
+        books.forEach(book -> {
+            StringBuilder sb=new StringBuilder();
+            book.getBookIntro().forEach(s -> sb.append(s).append("\n"));
+
+            StringReader reader=new StringReader(sb.toString());
+
+            try {
+                ps.setCharacterStream(1,reader);
+
+                ps.setString(2,book.getBookName());
+
+                ps.execute();
+            } catch (SQLException e) {
+                e.printStackTrace();
+                errList.add(book.getBookName());
+            }
+
+            new Gson().toJson(book);
+
+            System.out.println(book.getBookName());
+        });
+
+        System.out.println(errList);
 
     }
+
+    @Test
+    public void testReadText() throws SQLException {
+        java.sql.Connection connection=dataSource.getConnection();
+
+        PreparedStatement ps=connection.prepareStatement("SELECT bname , intro from book_info where bname= ?");
+
+        ps.setString(1,"我偏爱那些不切实际的浪漫");
+
+        ResultSet resultSet=ps.executeQuery();
+
+        if (resultSet.next()){
+            String str=resultSet.getString(1);
+            Reader sr=resultSet.getCharacterStream(2);
+            BufferedReader br=new BufferedReader(sr);
+            System.out.println(br.lines().collect(Collectors.toList()).size());
+        }
+
+        connection.close();
+        ps.close();
+        resultSet.close();
+    }
+
+    @Test
+    public void testSelectIntro(){
+        System.out.println(dao.queryBookByName("我偏爱那些不切实际的浪漫").getBookIntro().size());
+    }
+
 
 }

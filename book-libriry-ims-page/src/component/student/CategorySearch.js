@@ -13,8 +13,8 @@ export default class CategorySearch extends React.Component{
                 data:["现代文学","古典文学","自然科学","社科","推理","奇幻","报刊杂志","其他"]
             },
             {
-                name:"出版时间",
-                data:["~1500","1500-1800","1800-1900","1900-2000","2018-2018"]
+                name:"出版年份",
+                data:["2018","2017","2016","2015","2014","2013","2012","2011","2010","更早"]
             },
             {
                 name:"出版社",
@@ -41,6 +41,18 @@ export default class CategorySearch extends React.Component{
         });
     };
 
+    handleOnItemClick=(type,val)=>{
+        switch (type){
+            case "类型":type="category";break
+            case "出版年份":type="publishTime";break
+            case "出版社":type="publishWork";break
+            case "产地":type="publishLocal";break
+            default:return
+        }
+        let jsonStr="{"+type+":"+val+"}";
+        this.props.onClickItem(jsonStr)
+    };
+
     render(){
 
         return(<Collapse
@@ -63,7 +75,7 @@ export default class CategorySearch extends React.Component{
                                     grid={{gutter:16}}
                                     renderItem={
                                         item=>(
-                                            <span>{item}</span>
+                                            <a onClick={this.handleOnItemClick.bind(this,key.name,item)}>{item}</a>
                                         )
                                     }
                                   />

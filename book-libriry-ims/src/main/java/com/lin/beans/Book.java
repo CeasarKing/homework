@@ -1,11 +1,12 @@
 package com.lin.beans;
 
+import java.lang.reflect.Field;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-public class Book {
 
+public class Book {
     //库id
     private Integer bId;
     //书名
@@ -32,8 +33,10 @@ public class Book {
     //豆瓣评分
     private Double averageRank;
     private int rankNums;
-    private Double[]allRanks;
+    private List<Double> allRanks;
 
+    private String bookIntroFromDB;
+    private String authorIntroFromDB;
     //图书简介
     List<String> bookIntro;
     //作者简介
@@ -42,7 +45,7 @@ public class Book {
     public Book() {
     }
 
-    public Book(String bookName, String imgSrc, String author, String publicWork, String publicTime, String price, String wrapper, String ISBN, Double averageRank, int rankNums, Double[] allRanks, List<String> bookIntro, List<String> authorIntro) {
+    public Book(String bookName, String imgSrc, String author, String publicWork, String publicTime, String price, String wrapper, String ISBN, Double averageRank, int rankNums, List<Double> allRanks, List<String> bookIntro, List<String> authorIntro) {
         this.bId=new Random().nextInt(Integer.MAX_VALUE-100);
         this.bookName = bookName;
         this.imgSrc = imgSrc;
@@ -59,8 +62,30 @@ public class Book {
         this.authorIntro = authorIntro;
     }
 
+    public void setBook(Book book){
+        try {
+            if (book!=null){
+                Class clazz = Book.class;
+                Field[]fields=clazz.getDeclaredFields();
+                /*
+                按理来说  都是同样的类型  应该不会出现异常
+                Object[]temps=new Object[fields.length];
+                for (int i=0;i<fields.length;i++)
+                    temps[i]=fields[i].get(this);*/
+                for (Field f : fields) {
+                    f.setAccessible(true);
+                    Object obj=f.get(book);
+                    f.set(this, obj);
+                }
+            }
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+    }
+
     @Override
     public String toString() {
+        setNullBookIntro();
         return "Book{" +
                 "bId=" + bId +
                 ", bookName='" + bookName + '\'' +
@@ -90,6 +115,7 @@ public class Book {
     }
 
     public Book setTags(List<Integer> tags) {
+        setNullBookIntro();
         this.tags = tags;
         return this;
     }
@@ -198,16 +224,17 @@ public class Book {
         return this;
     }
 
-    public Double[] getAllRanks() {
+    public List<Double> getAllRanks() {
         return allRanks;
     }
 
-    public Book setAllRanks(Double[] allRanks) {
+    public Book setAllRanks(List<Double> allRanks) {
         this.allRanks = allRanks;
         return this;
     }
 
     public List<String> getBookIntro() {
+        setNullBookIntro();
         return bookIntro;
     }
 
@@ -224,4 +251,21 @@ public class Book {
         this.authorIntro = authorIntro;
         return this;
     }
+
+    private void setNullBookIntro(){
+        if (this.bookIntro==null || this.bookIntro.size()==0){
+            if (this.bookIntroFromDB!=null){
+                this.bookIntro=Arrays.asList(this.bookIntroFromDB.split("\n"));
+                this.bookIntroFromDB=null;
+            }
+        }
+        if (this.authorIntro==null || this.authorIntro.size()==0){
+            if (this.authorIntroFromDB!=null){
+                this.authorIntro=Arrays.asList(this.authorIntroFromDB.split("\n"));
+                this.authorIntroFromDB=null;
+            }
+        }
+    }
+
+
 }

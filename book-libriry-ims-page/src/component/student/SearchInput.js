@@ -2,10 +2,10 @@ import React from "react"
 
 import {Input} from "antd"
 
-const SearchInput = ()=>{
+const SearchInput = (props)=>{
 
-    const handleOnSearch=(e)=>{
-        console.log(e)
+    const handleOnSearch=(val)=>{
+        props.onSearch(val)
     };
 
     const width = window.screen.availWidth/3
@@ -19,7 +19,8 @@ const SearchInput = ()=>{
         placeholder={"你的颜如玉"}
         onSearch={handleOnSearch}
         size={"large"}
-        enterButton={"搜索"}>
+        enterButton={"搜索"}
+    >
     </Input.Search>)
 
 };

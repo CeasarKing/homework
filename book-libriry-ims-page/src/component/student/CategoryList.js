@@ -9,11 +9,11 @@ export default class CategoryList extends React.Component{
 
     constructor(props){
         super();
-
         const tree = this.prepareTreeList(props.tags);
-
         this.state={
-            listTree :tree
+            listTree :tree,
+            selectKey:[],   //选择文学
+            lastClickKey:-1
         }
     }
 
@@ -68,17 +68,43 @@ export default class CategoryList extends React.Component{
 
     onNodeSelect=(key)=>{
 
-        const tags = this.props.tags;
-        const queryTagIds=[key]
+        if (key.length>0) {
+            const tags = this.props.tags;
 
-        if (tags[key].parentId==0){
-            for (let i in tags){
-                if (tags[i].parentId==key){
-                    queryTagIds.push(i);
+            const keyy=key[0]
+            const queryTagIds=[keyy];
+
+            if (tags[keyy].parentId==0){
+                for (let i in tags){
+                    if (tags[i].parentId==key){
+                        queryTagIds.push(i);
+                    }
                 }
             }
+
+            const  selectKey = this.state.selectKey;
+
+            let index=-1
+            if ((index=selectKey.indexOf(keyy))>=0){
+                selectKey.splice(index,1)
+            }else {
+                selectKey.push(keyy)
+            }
+
+            this.setState({
+               selectKey:selectKey,
+                lastClickKey:keyy
+           },()=>this.props.onSelect(queryTagIds));
+
+        }else {
+            const lastKey = this.state.lastClickKey;
+            const selectKey = this.state.selectKey;
+            if (lastKey>=0)
+                selectKey.splice(selectKey.indexOf(lastKey,1));
+            this.setState({
+                selectKey:selectKey
+            })
         }
-        this.props.onSelect(queryTagIds)
     };
 
     render(){
@@ -86,7 +112,8 @@ export default class CategoryList extends React.Component{
         return(<Tree
                     showLine
                     onSelect={this.onNodeSelect}
-                    defaultExpandedKeys={["文学"]}
+                    defaultExpandedKeys={["54"]}
+                    expandedKeys={this.state.selectKey}
                 >
                     {cateList}
                 </Tree>)
