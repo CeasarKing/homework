@@ -39,10 +39,13 @@ class BookPopover extends React.Component{
     preGetBookIntro=(type,bid)=>{
         let respObj=null;
         $.ajax({
-            url:"http://localhost:8080/intros",
+            url:"http://192.168.1.101:8080/intros",
             data:{
                 type:type,
                 bid:bid
+            },
+            xhrFields:{
+                withCredentials:true
             },
             async:false,
             success:(resp)=>{

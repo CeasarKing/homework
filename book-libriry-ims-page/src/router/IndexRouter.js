@@ -4,8 +4,8 @@ import Login from "../component/login/LoginBody";
 import StudentHomeBody from "../component/student/StudentHomeBody"
 import BrowHistoryBody from "../component/hist/BrowHistoryBody"
 import AdminBody from "../component/admin/AdminBody"
-import BookAdder from "../component/admin/book/BookAdder";
-import BookAdmin from "../component/admin/book/BookAdmin";
+import ShoppingCartBody from "../component/shopping/ShoppingCartBody";
+
 
 const IndexRouter=()=>(
     <Router>
@@ -14,6 +14,7 @@ const IndexRouter=()=>(
             <Route path={"/stu"} component={StudentHomeBody}/>
             <Route path={"/his"} component={BrowHistoryBody}/>
             <Route path={"/admin"} component={AdminBody}></Route>
+            <Route path={"/cart"} component={ShoppingCartBody}/>
         </div>
     </Router>
 );

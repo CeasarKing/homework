@@ -54,11 +54,17 @@ export default class ShowBookList extends React.Component{
     }
 
     handleClickItem=(bname)=>{
+
+        console.log("click");
+
         let modalItem = null;
         $.ajax({
-            url:"http://localhost:8080/one",
+            url:"http://192.168.1.101:8080/one",
             data:{
                 bookName:bname
+            },
+            xhrFields:{
+              withCredentials:true
             },
             async:false,
             success:(resp)=>{
@@ -78,16 +84,19 @@ export default class ShowBookList extends React.Component{
         })
     };
 
-    handleOk=()=>{
-        this.setState({
-            modalVisible:false
-        })
+    handleOk=(book)=>{
+        this.props.onOk(this.state.modalItem)
     };
 
     handleCancel=()=>{
         this.setState({
             modalVisible:false
-        })
+        });
+
+    };
+
+    handleAddCart=()=>{
+        this.props.onAddCart(this.state.modalItem)
     };
 
     handlePopMouseEnterOrOut=(key)=>{
@@ -124,7 +133,7 @@ export default class ShowBookList extends React.Component{
                         </Popover>)}}>
 
                 </List>
-                <BookIntroModal item={this.state.modalItem} onOk={this.handleOk} onCancel={this.handleCancel} visible={this.state.modalVisible}/>
+                <BookIntroModal item={this.state.modalItem} onAddCart={this.handleAddCart} onOk={this.handleOk} onCancel={this.handleCancel} visible={this.state.modalVisible}/>
             </div>
         )
     }

@@ -1,12 +1,16 @@
 package com.lin.ui.controller;
 
+import com.lin.beans.Student;
+
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 public interface UserController {
 
-    String login(HttpSession session, HttpServletResponse response, String username, String password);
+    boolean login(HttpSession session, HttpServletResponse response, String username, String password);
 
-    String logout(HttpSession session);
+    String getStudent(HttpSession session);
+
+    boolean logout(HttpSession session);
 
 }

@@ -7,8 +7,8 @@ import $ from "jquery"
 class Login extends React.Component {
 
     state={
-        username:"",
-        password:"",
+        username:"Lin",
+        password:"123456789",
         formStyles:[
             {
                 userSpan:"账号",
@@ -39,31 +39,13 @@ class Login extends React.Component {
         }
     };
 
-    componentWillMount(){
-        console.log("123")
-        $.ajax({
-            url:"http://localhost:8080/login",
-            method:"post",
-            xhrFields: {
-                withCredentials: true
-            },
-            data:{
-                username:"111",
-                password:"123"
-            },
-            success:function (resp) {
-                console.log(resp)
-            }
-        })
-    };
-
     handleClickLogin=()=>{
         const un=this.state.username.trim();
         const pw=this.state.password.trim();
 
         if (un!=="" || pw!==""){
             $.ajax({
-                url:"http://localhost:8080/login",
+                url:"http://192.168.1.101:8080/login",
                 method:"post",
                 xhrFields:{
                   withCredentials:true
@@ -73,10 +55,17 @@ class Login extends React.Component {
                     password:pw
                 },
                 success:function (resp) {
-                    console.log(resp)
+                    if (resp){
+                        window.location.href = "http://localhost:3000/stu"
+                    }
                 }
             })
         }
+    };
+
+    handleInputPressEnter=()=>{
+
+        this.handleClickLogin()
 
     };
 
@@ -104,6 +93,7 @@ class Login extends React.Component {
                            size={"small"}
                            placeholder={"请输入账号"}
                            onChange = {(e)=>{this.setState({username:e.target.value})}}
+                           onPressEnter={this.handleInputPressEnter}
                     /><br/>
 
                     <span style={{float:"left",marginTop:"10px"}}>{formStyle.pwSpan}</span>
@@ -116,6 +106,7 @@ class Login extends React.Component {
                            size={"small"}
                            placeholder={"请输入密码"}
                            onChange={(e)=>{this.setState({password:e.target.value})}}
+                           onPressEnter={this.handleInputPressEnter}
                     /><br/>
                 </div>
 

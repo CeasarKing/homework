@@ -30,8 +30,10 @@ export default class BookIntroModal extends React.Component{
     };
 
     handleCancel=()=>{
-        console.log("cancel");
         this.props.onCancel()
+    };
+    hanldeAddCart=()=>{
+        this.props.onAddCart()
     };
 
     render(){
@@ -48,7 +50,7 @@ export default class BookIntroModal extends React.Component{
                            visible={this.state.visible}
                            title={item!=null?item.bookName:"没有数据哦"}
                            footer={[
-                               <Button key={"cancel"} type={"primary"} onClick={this.handleCancel}><a><Icon type={"shopping-cart"}/>加入购入车</a></Button>,
+                               <Button key={"cancel"} type={"primary"} onClick={this.hanldeAddCart}><a><Icon type={"shopping-cart"}/>加入购入车</a></Button>,
                                <Button key={"ok"} type={"primary"} onClick={this.handleOk}><a><Icon type="check-square-o" />直接购买</a></Button>]}>
                     <Layout>
                         <Layout  style={{background:"#fff"}}>

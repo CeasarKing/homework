@@ -1,5 +1,5 @@
 import React from "react"
-import {Menu,Icon}from "antd"
+import {Menu,Icon,Badge}from "antd"
 
 const {SubMenu,ItemGroup,Item}=Menu
 
@@ -9,6 +9,7 @@ export default class StudentHome extends React.Component {
         currKey: "store",
         headerWidth: 0,
         headerWidthPercent: 70,
+        badgeCount:0,
     };
 
     handleHeaderClick = (e) => {
@@ -18,7 +19,7 @@ export default class StudentHome extends React.Component {
 
     };
 
-    componentWillMount = () => {
+    componentWillMount (){
         const scrWi = window.screen.availWidth;
         const headerWi = scrWi * this.state.headerWidthPercent / 100;
 
@@ -33,15 +34,24 @@ export default class StudentHome extends React.Component {
 
     };
 
+    componentWillReceiveProps(nextProps){
+        this.setState({
+            badgeCount:nextProps.count
+        })
+    }
+
     render() {
 
-        const headerStyle = {
+        const headerStyle = this.props===undefined?{
             width: this.state.headerWidth,
             marginLeft: (100 - this.state.headerWidthPercent) / 2 + "%",
             position:"relative"
-        };
+        }:{};
 
         const NormalHeader = () => {
+
+            const user = this.props.user;
+
             return (
                 <div style={headerStyle}>
 
@@ -82,11 +92,12 @@ export default class StudentHome extends React.Component {
                         </Item>
 
                         <Menu.Item key={"user"} style={{float: 'right'}}>
-                            <Icon type={"user"}/>个人中心
+                            <Icon type={"user"}/>{user!=null&&user!=undefined ? user.name:"个人中心"}
                         </Menu.Item>
 
                         <Menu.Item key={"shopping"} style={{float: 'right'}}>
                             <Icon type={"shopping-cart"}/>书篮
+                            <Badge count={this.state.badgeCount}  overflowCount={99}/>
                         </Menu.Item>
 
                     </Menu><br/>
@@ -95,7 +106,7 @@ export default class StudentHome extends React.Component {
 
                 </div>
             )
-        }
+        };
 
         return (
             <NormalHeader/>

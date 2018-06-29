@@ -3,54 +3,31 @@
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/book-libriry-ims-page/src/component/admin/book/BookAdmin.js" line="294" />
     <bookmark url="file://$PROJECT_DIR$/book-libriry-ims/src/test/java/com/once/ScrawForExecuteOnce.java" line="68" />
-    <bookmark url="file://$PROJECT_DIR$/book-libriry-ims-page/src/component/student/ShowBookList.js" line="101" />
+    <bookmark url="file://$PROJECT_DIR$/book-libriry-ims-page/src/component/student/ShowBookList.js" line="110" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91375600-ff40-4383-a4da-85b9f36ac45b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/book-libriry-ims-page/src/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/beans/LendedBook.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/beans/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/dao/BookIntroDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/dao/BookLendedDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/dao/StudenForAdmintDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/dao/StudentForUserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/dao/interceptor/ResultHnadlerIntercepter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/service/QueryBookIntroService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/service/StudentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/service/impl/QueryBookIntroServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/service/impl/StudentServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/controller/BookController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/controller/impl/BookControllerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/controller/impl/UserControllerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/filter/UserFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-libriry-ims/src/test/java/com/interf/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-libriry-ims/src/test/java/com/lin/dao/BookIntroDaoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-libriry-ims/src/test/java/com/lin/dao/BookLendedDaoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-libriry-ims/src/test/java/com/lin/dao/StudentDaoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-libriry-ims/src/test/java/com/lin/dao/StudentForUserDaoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-libriry-ims/src/test/java/com/lin/service/UserServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-libriry-ims-page/public/imgs/head.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-libriry-ims-page/src/component/shopping/CustomerInfo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-libriry-ims-page/src/component/shopping/ShoppingCartBody.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-libriry-ims-page/src/component/shopping/ShoppingCartItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-libriry-ims-page/src/preRenderDom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/filter/AjaxCrossOrginFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/filter/IsLoginFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book-libriry-ims-page/src/component/login/LoginBody.js" beforeDir="false" afterPath="$PROJECT_DIR$/book-libriry-ims-page/src/component/login/LoginBody.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-libriry-ims-page/src/component/student/BookChild.js" beforeDir="false" afterPath="$PROJECT_DIR$/book-libriry-ims-page/src/component/student/BookChild.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book-libriry-ims-page/src/component/student/BookIntroModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/book-libriry-ims-page/src/component/student/BookIntroModal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book-libriry-ims-page/src/component/student/BookPopover.js" beforeDir="false" afterPath="$PROJECT_DIR$/book-libriry-ims-page/src/component/student/BookPopover.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-libriry-ims-page/src/component/student/CategoryList.js" beforeDir="false" afterPath="$PROJECT_DIR$/book-libriry-ims-page/src/component/student/CategoryList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-libriry-ims-page/src/component/student/CategorySearch.js" beforeDir="false" afterPath="$PROJECT_DIR$/book-libriry-ims-page/src/component/student/CategorySearch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-libriry-ims-page/src/component/student/SearchInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/book-libriry-ims-page/src/component/student/SearchInput.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-libriry-ims-page/src/component/student/NomalHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/book-libriry-ims-page/src/component/student/NomalHeader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book-libriry-ims-page/src/component/student/ShowBookList.js" beforeDir="false" afterPath="$PROJECT_DIR$/book-libriry-ims-page/src/component/student/ShowBookList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book-libriry-ims-page/src/component/student/StudentHomeBody.js" beforeDir="false" afterPath="$PROJECT_DIR$/book-libriry-ims-page/src/component/student/StudentHomeBody.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/beans/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/beans/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/controller/ImgController.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/controller/ImgController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/controller/IndexController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/dao/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/dao/BookDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/dao/provider/BookDaoProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/dao/provider/BookDaoProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/service/QueryBookInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/service/QueryBookInfoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/service/impl/QueryBookInfoServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/service/impl/QueryBookInfoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-libriry-ims/src/test/java/com/lin/dao/BookDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-libriry-ims/src/test/java/com/lin/dao/BookDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-libriry-ims/src/test/java/com/lin/service/QueryBookInfoServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-libriry-ims/src/test/java/com/lin/service/QueryBookInfoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-libriry-ims/src/test/java/com/once/ForJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-libriry-ims/src/test/java/com/once/ForJson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-libriry-ims/src/test/java/com/once/ScrawForExecuteOnce.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-libriry-ims/src/test/java/com/once/ScrawForExecuteOnce.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-libriry-ims-page/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/book-libriry-ims-page/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-libriry-ims-page/src/router/IndexRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/book-libriry-ims-page/src/router/IndexRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/controller/impl/BookControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/controller/impl/BookControllerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/controller/impl/UserControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/controller/impl/UserControllerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/filter/UserFilter.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/book-libriry-ims/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,120 +39,127 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BookIntroDaoTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/test/java/com/lin/dao/BookIntroDaoTest.java">
+      <file leaf-file-name="StudentHomeBody.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/book-libriry-ims-page/src/component/student/StudentHomeBody.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="9" selection-start-line="9" selection-end-line="10" selection-end-column="39" />
+            <state relative-caret-position="-408">
+              <caret line="71" column="4" selection-start-line="71" selection-start-column="4" selection-end-line="78" selection-end-column="6" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#424#771#0" />
+                <element signature="e#712#1150#0" />
+                <element signature="e#1172#1450#0" />
+                <element signature="e#1665#1734#0" />
+                <element signature="e#1783#2157#0" />
+                <element signature="e#2218#2718#0" />
+                <element signature="e#2768#3086#0" />
+                <element signature="e#3659#3675#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StudentService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/service/StudentService.java">
+      <file leaf-file-name="ShoppingCartBody.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/book-libriry-ims-page/src/component/shopping/ShoppingCartBody.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="33" column="31" lean-forward="true" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+              <folding>
+                <element signature="e#1#26#0" expanded="true" />
+                <element signature="e#205#338#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShoppingCartItem.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/book-libriry-ims-page/src/component/shopping/ShoppingCartItem.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="437">
+              <caret line="25" column="29" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="29" />
+              <folding>
+                <element signature="e#1#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomerInfo.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/book-libriry-ims-page/src/component/shopping/CustomerInfo.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="24">
+              <caret line="4" column="15" lean-forward="true" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+              <folding>
+                <element signature="e#1#26#0" expanded="true" />
+                <element signature="e#157#340#0" />
+                <element signature="e#349#365#0" />
+                <element signature="e#529#545#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IndexRouter.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/book-libriry-ims-page/src/router/IndexRouter.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="16" column="61" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminRoute.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/book-libriry-ims-page/src/router/AdminRoute.js">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="24" lean-forward="true" selection-start-column="24" selection-end-column="24" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#0#58#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StudentServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/service/impl/StudentServiceImpl.java">
+      <file leaf-file-name="NomalHeader.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/book-libriry-ims-page/src/component/student/NomalHeader.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="20" selection-start-line="17" selection-end-line="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QueryBookInfoServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/test/java/com/lin/service/QueryBookInfoServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="12" selection-start-line="12" selection-end-line="13" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserServiceTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/test/java/com/lin/service/UserServiceTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-              <folding>
-                <element signature="e#525#526#0" expanded="true" />
-                <element signature="e#561#562#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserControllerImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/controller/impl/UserControllerImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginBody.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/book-libriry-ims-page/src/component/login/LoginBody.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="68" column="38" selection-start-line="68" selection-start-column="38" selection-end-line="68" selection-end-column="38" />
+            <state relative-caret-position="343">
+              <caret line="44" column="39" selection-start-line="44" selection-start-column="39" selection-end-line="44" selection-end-column="39" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
-                <element signature="e#223#535#0" />
-                <element signature="e#589#844#0" />
-                <element signature="e#1538#1790#0" />
+                <element signature="e#289#359#0" />
+                <element signature="e#840#856#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BookAdmin.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/book-libriry-ims-page/src/component/admin/book/BookAdmin.js">
+      <file leaf-file-name="SearchInput.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/book-libriry-ims-page/src/component/student/SearchInput.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1181">
+            <state>
               <folding>
-                <element signature="e#0#25#0" expanded="true" />
-                <element signature="e#100#3562#0" />
-                <element signature="e#106#448#0" />
-                <element signature="e#454#793#0" />
-                <element signature="e#799#1135#0" />
+                <element signature="e#214#479#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/book-libriry-ims-page/src/test.html">
+      <file leaf-file-name="preRenderDom.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/book-libriry-ims-page/src/preRenderDom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+            <state relative-caret-position="437">
+              <caret line="31" column="18" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserFilter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/filter/UserFilter.java">
+      <file leaf-file-name="MainApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/MainApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="115">
+              <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
               <folding>
-                <element signature="method#doAjaxCrossOrgin#0;class#LoginFilter#0" />
-                <element signature="method#doValidateUser#0;class#LoginFilter#0" />
+                <element signature="e#237#238#0" expanded="true" />
+                <element signature="e#303#304#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -186,9 +170,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
         <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -198,29 +182,15 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$USER_HOME$/AppData/Local/Temp/360zip$Temp/360$1/jdbc.java" />
-        <option value="$PROJECT_DIR$/book-libriry-ims-page/src/component/student/CategorySearch.js" />
-        <option value="$PROJECT_DIR$/book-libriry-ims-page/src/component/student/SearchInput.js" />
-        <option value="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/controller/IndexController.java" />
-        <option value="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/dao/provider/BookIntroDaoProvider.java" />
-        <option value="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/dao/interceptor/IntroStrToListIntercepor.java" />
-        <option value="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/controller/ImgController.java" />
-        <option value="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/service/QueryBookIntroService.java" />
-        <option value="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/service/impl/QueryBookIntroServiceImpl.java" />
-        <option value="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/controller/impl/IndexControllerImpl.java" />
-        <option value="$PROJECT_DIR$/book-libriry-ims/src/test/java/com/lin/dao/BookIntroDaoTest.java" />
-        <option value="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/dao/BookIntroDao.java" />
         <option value="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/service/QueryBookInfoService.java" />
         <option value="$PROJECT_DIR$/book-libriry-ims/src/test/java/com/lin/service/QueryBookInfoServiceImpl.java" />
         <option value="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/service/impl/QueryBookInfoServiceImpl.java" />
         <option value="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/controller/impl/BookControllerImpl.java" />
-        <option value="$PROJECT_DIR$/book-libriry-ims-page/src/component/student/StudentHomeBody.js" />
         <option value="$PROJECT_DIR$/book-libriry-ims/src/test/java/com/lin/dao/BookLendedDao.java" />
         <option value="$PROJECT_DIR$/book-libriry-ims/src/test/java/com/lin/dao/BookLendedDaoTest.java" />
         <option value="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/dao/BookLendedDao.java" />
         <option value="$PROJECT_DIR$/book-libriry-ims/src/test/java/com/lin/dao/StudentDaoTest.java" />
         <option value="$PROJECT_DIR$/book-libriry-ims-page/src/component/student/BookChild.js" />
-        <option value="$PROJECT_DIR$/book-libriry-ims-page/src/component/student/ShowBookList.js" />
         <option value="$PROJECT_DIR$/book-libriry-ims/src/test/java/com/lin/dao/BookDaoTest.java" />
         <option value="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/dao/interceptor/ResultHnadlerIntercepter.java" />
         <option value="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/beans/Book.java" />
@@ -228,8 +198,6 @@
         <option value="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/beans/LendedBook.java" />
         <option value="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/dao/provider/BookDaoProvider.java" />
         <option value="$PROJECT_DIR$/book-libriry-ims/src/test/java/com/once/ForJson.java" />
-        <option value="$PROJECT_DIR$/book-libriry-ims-page/src/component/student/BookPopover.js" />
-        <option value="$PROJECT_DIR$/book-libriry-ims-page/src/component/student/BookIntroModal.js" />
         <option value="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/controller/BookController.java" />
         <option value="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/controller/UserController.java" />
         <option value="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/controller/impl/UserControllerImpl.java" />
@@ -243,12 +211,28 @@
         <option value="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/service/StudentDao.java" />
         <option value="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/service/StudentService.java" />
         <option value="$PROJECT_DIR$/book-libriry-ims-page/src/test.html" />
-        <option value="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/filter/UserFilter.java" />
         <option value="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/service/impl/StudentServiceImpl.java" />
         <option value="$PROJECT_DIR$/book-libriry-ims/src/test/java/com/lin/service/UserServiceDaoTest.java" />
         <option value="$PROJECT_DIR$/book-libriry-ims/src/test/java/com/lin/service/UserServiceTest.java" />
+        <option value="$PROJECT_DIR$/book-libriry-ims-page/src/index.js" />
+        <option value="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/filter/UserFilter.java" />
+        <option value="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/controller/BookController.java" />
+        <option value="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/filter/AjaxCrossOrginFilter.java" />
+        <option value="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/controller/impl/BookControllerImpl.java" />
         <option value="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/controller/impl/UserControllerImpl.java" />
+        <option value="$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/filter/IsLoginFilter.java" />
         <option value="$PROJECT_DIR$/book-libriry-ims-page/src/component/login/LoginBody.js" />
+        <option value="$PROJECT_DIR$/book-libriry-ims-page/src/preRenderDom.js" />
+        <option value="$PROJECT_DIR$/book-libriry-ims-page/src/component/student/BookPopover.js" />
+        <option value="$PROJECT_DIR$/book-libriry-ims-page/src/component/student/ShowBookList.js" />
+        <option value="$PROJECT_DIR$/book-libriry-ims-page/src/component/student/BookIntroModal.js" />
+        <option value="$PROJECT_DIR$/book-libriry-ims-page/src/router/IndexRouter.js" />
+        <option value="$PROJECT_DIR$/book-libriry-ims-page/src/component/student/StudentHomeBody.js" />
+        <option value="$PROJECT_DIR$/book-libriry-ims-page/src/component/student/NomalHeader.js" />
+        <option value="$PROJECT_DIR$/book-libriry-ims-page/src/component/shopping/CustomerInfo.js" />
+        <option value="$PROJECT_DIR$/book-libriry-ims-page/src/component/shopping/ShoppingCartBody.js" />
+        <option value="$PROJECT_DIR$/book-libriry-ims-page/src/component/shopping/ShoppingCartItem.js" />
       </list>
     </option>
   </component>
@@ -262,8 +246,8 @@
     <handled-path value="$PROJECT_DIR$/book-libriry-ims-page/node_modules" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="663" />
-    <option name="y" value="22" />
+    <option name="x" value="381" />
+    <option name="y" value="220" />
     <option name="width" value="1264" />
     <option name="height" value="757" />
   </component>
@@ -272,6 +256,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -322,47 +308,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="lin" type="462c0819:PsiDirectoryNode" />
-              <item name="beans" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="homework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="homework" type="462c0819:PsiDirectoryNode" />
-              <item name="book-libriry-ims" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="lin" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="homework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="homework" type="462c0819:PsiDirectoryNode" />
-              <item name="book-libriry-ims" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="lin" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="homework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="homework" type="462c0819:PsiDirectoryNode" />
-              <item name="book-libriry-ims" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="lin" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="homework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="homework" type="462c0819:PsiDirectoryNode" />
-              <item name="book-libriry-ims" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="lin" type="462c0819:PsiDirectoryNode" />
               <item name="ui" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -375,18 +320,6 @@
               <item name="lin" type="462c0819:PsiDirectoryNode" />
               <item name="ui" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="homework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="homework" type="462c0819:PsiDirectoryNode" />
-              <item name="book-libriry-ims" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="lin" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="homework" type="b2602c69:ProjectViewProjectNode" />
@@ -408,6 +341,12 @@
               <item name="homework" type="b2602c69:ProjectViewProjectNode" />
               <item name="homework" type="462c0819:PsiDirectoryNode" />
               <item name="book-libriry-ims-page" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="homework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="homework" type="462c0819:PsiDirectoryNode" />
+              <item name="book-libriry-ims-page" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -423,7 +362,7 @@
               <item name="book-libriry-ims-page" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="component" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="shopping" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="homework" type="b2602c69:ProjectViewProjectNode" />
@@ -431,14 +370,12 @@
               <item name="book-libriry-ims-page" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="component" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
+              <item name="student" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -456,18 +393,18 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\IDEAprojects\homework\sql" />
-      <recent name="F:\IDEAprojects\homework\book-libriry-ims-page\src\component\student" />
-      <recent name="F:\IDEAprojects\homework\book-libriry-ims-page\public" />
-      <recent name="F:\IDEAprojects\homework\book-libriry-ims\src\main\resources\static\js\vue-lib" />
-      <recent name="F:\IDEAprojects\homework\book-libriry-ims\src\main\resources\static\js\react-lib" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\IDEAprojects\homework\book-libriry-ims-page\src\component\admin\book" />
       <recent name="F:\IDEAprojects\homework\book-libriry-ims-page\src\component\student" />
       <recent name="F:\IDEAprojects\homework\book-libriry-ims\src\main\resources\static\js" />
       <recent name="F:\IDEAprojects\homework\book-libriry-ims\src\main\resources\static" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\IDEAprojects\homework\book-libriry-ims-page\public\imgs" />
+      <recent name="F:\IDEAprojects\homework\sql" />
+      <recent name="F:\IDEAprojects\homework\book-libriry-ims-page\src\component\student" />
+      <recent name="F:\IDEAprojects\homework\book-libriry-ims-page\public" />
+      <recent name="F:\IDEAprojects\homework\book-libriry-ims\src\main\resources\static\js\vue-lib" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -482,7 +419,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserServiceTest.testLogin">
+  <component name="RunManager" selected="Spring Boot.MainApplication">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -640,9 +577,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.MainApplication" />
         <item itemvalue="JUnit.UserServiceTest.testLogin" />
         <item itemvalue="JUnit.StudentForUserDaoTest.testLogin" />
-        <item itemvalue="Spring Boot.MainApplication" />
         <item itemvalue="JUnit.BookDaoTest.testQueryByName" />
         <item itemvalue="JUnit.BookDaoTest.testQueryRanks" />
       </list>
@@ -673,7 +610,8 @@
       <workItem from="1530009757595" duration="6537000" />
       <workItem from="1530063464411" duration="6336000" />
       <workItem from="1530070189082" duration="16397000" />
-      <workItem from="1530102265257" duration="24206000" />
+      <workItem from="1530102265257" duration="32726000" />
+      <workItem from="1530191980444" duration="15748000" />
     </task>
     <task id="LOCAL-00001" summary="bookAdder,bookAdmin,bookDeller">
       <created>1529235720187</created>
@@ -703,13 +641,17 @@
       <option name="project" value="LOCAL" />
       <updated>1529348134865</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="糙">
+      <created>1530183236989</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1530183236989</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BookDaoTest_testQueryRanks - 2018.06.27 at 22h 58m 04s.xml">
-      <configuration name="BookDaoTest.testQueryRanks" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BookDaoTest_testQueryRanks - 2018.06.27 at 23h 03m 38s.xml">
       <configuration name="BookDaoTest.testQueryRanks" configurationId="JUnit" />
     </history-entry>
@@ -737,12 +679,16 @@
     <history-entry file="UserServiceTest_testLogin - 2018.06.28 at 13h 19m 11s.xml">
       <configuration name="UserServiceTest.testLogin" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="UserServiceTest_testLogin - 2018.06.28 at 19h 49m 38s.xml">
+      <configuration name="UserServiceTest.testLogin" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="278272000" />
+    <option name="totallyTimeSpent" value="302540000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.32936078" />
@@ -752,15 +698,15 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.29685807" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.29685807" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49946696" weight="0.27843988" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49946696" visible="true" weight="0.27843988" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49882352" visible="true" weight="0.23027718" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49768874" visible="true" weight="0.23294243" />
       <window_info anchor="right" id="Bean Validation" order="3" weight="0.32995737" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info id="Structure" order="1" sideWeight="0.5011765" side_tool="true" weight="0.22788204" />
+      <window_info id="Structure" order="1" sideWeight="0.5023112" side_tool="true" weight="0.23027718" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39869988" />
@@ -784,7 +730,8 @@
     <MESSAGE value="为了准备一点点数据，从豆瓣" />
     <MESSAGE value="可以得到最初始数据的sql" />
     <MESSAGE value="才做出首页展示页的渲染，还有点糙" />
-    <option name="LAST_COMMIT_MESSAGE" value="才做出首页展示页的渲染，还有点糙" />
+    <MESSAGE value="糙" />
+    <option name="LAST_COMMIT_MESSAGE" value="糙" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -818,242 +765,23 @@
           <properties />
           <option name="timeStamp" value="67" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/controller/impl/BookControllerImpl.java</url>
+          <line>33</line>
+          <properties />
+          <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/filter/IsLoginFilter.java</url>
+          <line>18</line>
+          <properties />
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="68" />
+      <option name="time" value="82" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar!/org/apache/ibatis/session/defaults/DefaultSqlSession.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="125" selection-start-line="125" selection-end-line="125" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis-spring/1.3.2/mybatis-spring-1.3.2.jar!/org/mybatis/spring/SqlSessionTemplate.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="201" selection-start-line="201" selection-end-line="201" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/5.0.6.RELEASE/spring-test-5.0.6.RELEASE.jar!/org/springframework/test/context/junit4/statements/RunAfterTestExecutionCallbacks.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/5.0.6.RELEASE/spring-test-5.0.6.RELEASE.jar!/org/springframework/test/context/junit4/statements/RunAfterTestMethodCallbacks.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/5.0.6.RELEASE/spring-test-5.0.6.RELEASE.jar!/org/springframework/test/context/junit4/SpringJUnit4ClassRunner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="126" selection-start-line="126" selection-end-line="126" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/ParentRunner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/service/QueryBookIntroService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/service/QueryBookInfoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/service/impl/QueryBookInfoServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="59" column="27" selection-start-line="59" selection-start-column="27" selection-end-line="59" selection-end-column="27" />
-          <folding>
-            <element signature="method#getAllInfosAndTags#0;class#QueryBookInfoServiceImpl#0" />
-            <element signature="method#getInfoByCategoryMap#0;class#QueryBookInfoServiceImpl#0" />
-            <element signature="method#getAllTaps#0;class#QueryBookInfoServiceImpl#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/service/impl/QueryBookIntroServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/test/java/com/lin/dao/BookLendedDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="13" selection-start-line="13" selection-end-line="14" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/test/java/com/lin/dao/TagsDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/dao/BookLendedDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="15" column="64" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book-libriry-ims-page/src/component/student/StudentHomeBody.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1909">
-          <caret line="142" column="44" selection-start-line="142" selection-start-column="44" selection-end-line="142" selection-end-column="44" />
-          <folding>
-            <element signature="e#507#646#0" />
-            <element signature="e#685#1087#0" />
-            <element signature="e#1107#1240#0" />
-            <element signature="e#1279#1348#0" />
-            <element signature="e#1382#1756#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book-libriry-ims-page/src/component/student/ShowBookList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-353">
-          <caret line="80" selection-start-line="80" selection-end-line="80" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-            <element signature="e#843#961#0" />
-            <element signature="e#985#1425#0" />
-            <element signature="e#1076#1394#0" />
-            <element signature="e#1863#1936#0" />
-            <element signature="e#1960#2033#0" />
-            <element signature="e#2073#2089#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/test/java/com/lin/MainApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/test/java/com/once/ScrawForExecuteOnce.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="808">
-          <caret line="236" lean-forward="true" selection-start-line="236" selection-end-line="236" />
-          <folding>
-            <element signature="method#getCateList#0;class#ScrawForExecuteOnce#0" />
-            <element signature="method#writeToJson#0;class#ScrawForExecuteOnce#0" />
-            <element signature="method#readCateJson#0;class#ScrawForExecuteOnce#0" />
-            <element signature="method#insertCategoryIntoDB#0;class#ScrawForExecuteOnce#0" />
-            <element signature="method#getCategoryUrlList#0;class#ScrawForExecuteOnce#0" />
-            <element signature="method#getBooksUrlList#0;class#ScrawForExecuteOnce#0" />
-            <element signature="method#GetUrlFromList#0;class#ScrawForExecuteOnce#0" />
-            <element signature="method#getInfoFromHtml#0;class#ScrawForExecuteOnce#0" />
-            <element signature="method#testInfoMapTag#0;class#ScrawForExecuteOnce#0" />
-            <element signature="method#testGetImg#0;class#ScrawForExecuteOnce#0" />
-            <element signature="method#testModImgName#0;class#ScrawForExecuteOnce#0" />
-            <element signature="method#testInsert#0;class#ScrawForExecuteOnce#0" />
-            <element signature="method#saveIntro#0;class#ScrawForExecuteOnce#0" />
-            <element signature="method#testReadText#0;class#ScrawForExecuteOnce#0" />
-            <element signature="e#20220#20221#0" expanded="true" />
-            <element signature="e#20313#20314#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/dao/BookIntroDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/dao/interceptor/ResultHnadlerIntercepter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="100" column="24" selection-start-line="100" selection-start-column="24" selection-end-line="100" selection-end-column="24" />
-          <folding>
-            <element signature="method#getIntercepterMethodId#0;class#ResultHnadlerIntercepter#0" />
-            <element signature="method#intercepterQueryBookIntros#0;class#ResultHnadlerIntercepter#0" />
-            <element signature="method#intercepterQueryBookRanks#0;class#ResultHnadlerIntercepter#0" />
-            <element signature="e#3818#3819#0" expanded="true" />
-            <element signature="e#3860#3861#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/beans/Book.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="35" column="33" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/dao/BookDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="29" column="75" selection-start-line="29" selection-start-column="75" selection-end-line="29" selection-end-column="75" />
-          <folding>
-            <element signature="e#1817#2066#0" />
-            <element signature="e#2157#2402#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/beans/LendedBook.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="22" column="47" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
-          <folding>
-            <element signature="method#LendedBook#1;class#LendedBook#0" />
-            <element signature="e#1060#1061#0" expanded="true" />
-            <element signature="e#1095#1096#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/dao/provider/BookDaoProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="303">
@@ -1072,59 +800,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="41" column="56" selection-start-line="41" selection-start-column="52" selection-end-line="41" selection-end-column="56" />
-          <folding>
-            <element signature="method#testMapper#0;class#BookDaoTest#0" />
-            <element signature="e#1553#1554#0" expanded="true" />
-            <element signature="e#1592#1593#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book-libriry-ims-page/src/component/student/BookChild.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="26" column="68" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="68" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book-libriry-ims-page/src/component/student/BookPopover.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book-libriry-ims-page/src/component/student/BookIntroModal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="75" column="125" selection-start-line="75" selection-start-column="125" selection-end-line="75" selection-end-column="125" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/MainApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-          <folding>
-            <element signature="e#237#238#0" expanded="true" />
-            <element signature="e#303#304#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/controller/BookController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
@@ -1142,44 +817,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/controller/impl/BookControllerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="71" column="18" selection-start-line="71" selection-start-column="18" selection-end-line="71" selection-end-column="18" />
-          <folding>
-            <element signature="method#getAllInfosAndTags#0;class#BookControllerImpl#0" />
-            <element signature="method#getBookIntros#0;class#BookControllerImpl#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="66" selection-start-line="7" selection-start-column="66" selection-end-line="7" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/controller/ImgController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="method#getImg#0;class#ImgController#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/dao/StudenForAdmintDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
           <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1187,9 +828,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="23" column="78" lean-forward="true" selection-start-line="23" selection-start-column="78" selection-end-line="23" selection-end-column="78" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1204,11 +842,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="18" column="72" selection-start-line="18" selection-start-column="72" selection-end-line="18" selection-end-column="72" />
-          <folding>
-            <element signature="e#22#70#0" />
-            <element signature="e#536#537#0" expanded="true" />
-            <element signature="e#576#577#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1216,11 +849,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="50" column="33" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
-          <folding>
-            <element signature="method#Student#1;class#Student#0" />
-            <element signature="method#toString#0;class#Student#0" />
-            <element signature="e#1276#1277#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1228,19 +856,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="9" selection-start-line="9" selection-end-line="10" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/service/StudentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="24" lean-forward="true" selection-start-column="24" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1251,24 +866,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/filter/UserFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="method#doAjaxCrossOrgin#0;class#LoginFilter#0" />
-            <element signature="method#doValidateUser#0;class#LoginFilter#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/service/impl/StudentServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
           <caret line="20" selection-start-line="17" selection-end-line="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1283,17 +884,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="e#525#526#0" expanded="true" />
-            <element signature="e#561#562#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/controller/impl/UserControllerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
@@ -1310,15 +900,329 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.6.RELEASE/spring-web-5.0.6.RELEASE.jar!/org/springframework/web/filter/RequestContextFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="34" column="157" selection-start-line="34" selection-start-column="157" selection-end-line="34" selection-end-column="157" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.6.RELEASE/spring-web-5.0.6.RELEASE.jar!/org/springframework/web/filter/HttpPutFormContentFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="69" selection-start-line="69" selection-end-line="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.6.RELEASE/spring-web-5.0.6.RELEASE.jar!/org/springframework/web/filter/HiddenHttpMethodFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.6.RELEASE/spring-web-5.0.6.RELEASE.jar!/org/springframework/web/filter/CharacterEncodingFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.6.RELEASE/spring-web-5.0.6.RELEASE.jar!/org/springframework/web/filter/OncePerRequestFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.31/tomcat-embed-core-8.5.31-sources.jar!/org/apache/catalina/core/StandardWrapperValve.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="290" selection-start-line="290" selection-end-line="290" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/service/StudentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-libriry-ims-page/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.31/tomcat-embed-core-8.5.31-sources.jar!/javax/servlet/http/HttpServletResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="478" column="28" selection-start-line="478" selection-start-column="28" selection-end-line="478" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="9" column="103" selection-start-line="9" selection-start-column="103" selection-end-line="9" selection-end-column="103" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/filter/UserFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-809">
+          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/controller/ImgController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="method#getImg#0;class#ImgController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/controller/BookController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.31/tomcat-embed-core-8.5.31-sources.jar!/org/apache/catalina/core/ApplicationFilterChain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="200" selection-start-line="200" selection-end-line="200" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/dao/interceptor/ResultHnadlerIntercepter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+          <folding>
+            <element signature="method#getIntercepterMethodId#0;class#ResultHnadlerIntercepter#0" />
+            <element signature="method#intercepterQueryBookIntros#0;class#ResultHnadlerIntercepter#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/controller/impl/UserControllerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="15" column="88" selection-start-line="15" selection-start-column="88" selection-end-line="15" selection-end-column="88" />
+          <folding>
+            <element signature="method#logout#0;class#UserControllerImpl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/controller/impl/BookControllerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="method#getBookIntros#0;class#BookControllerImpl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/filter/AjaxCrossOrginFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="66" />
+          <folding>
+            <element signature="e#878#879#0" expanded="true" />
+            <element signature="e#918#919#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/ui/filter/IsLoginFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="32" column="58" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/book-libriry-ims-page/src/component/login/LoginBody.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="68" column="38" selection-start-line="68" selection-start-column="38" selection-end-line="68" selection-end-column="38" />
+        <state relative-caret-position="237">
+          <caret line="56" column="41" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
-            <element signature="e#223#535#0" />
-            <element signature="e#589#844#0" />
-            <element signature="e#1538#1790#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-libriry-ims-page/src/component/student/BookPopover.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="48" column="14" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-libriry-ims-page/src/component/student/CategorySearch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-libriry-ims-page/src/component/student/BookChild.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-libriry-ims-page/src/component/student/ShowBookList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="135" column="23" selection-start-line="135" selection-start-column="23" selection-end-line="135" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+            <element signature="e#990#1108#0" />
+            <element signature="e#1132#1576#0" />
+            <element signature="e#1607#2155#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-libriry-ims-page/src/component/student/BookIntroModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-libriry-ims-page/src/router/AdminRoute.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-libriry-ims-page/src/router/IndexRouter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="16" column="61" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-libriry-ims-page/src/component/student/SearchInput.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#214#479#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-libriry-ims-page/src/component/student/StudentHomeBody.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-408">
+          <caret line="71" column="4" selection-start-line="71" selection-start-column="4" selection-end-line="78" selection-end-column="6" />
+          <folding>
+            <element signature="e#424#771#0" />
+            <element signature="e#712#1150#0" />
+            <element signature="e#1172#1450#0" />
+            <element signature="e#1665#1734#0" />
+            <element signature="e#1783#2157#0" />
+            <element signature="e#2218#2718#0" />
+            <element signature="e#2768#3086#0" />
+            <element signature="e#3659#3675#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-libriry-ims/src/main/java/com/lin/MainApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+          <folding>
+            <element signature="e#237#238#0" expanded="true" />
+            <element signature="e#303#304#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-libriry-ims-page/src/preRenderDom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="31" column="18" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-libriry-ims-page/src/component/student/NomalHeader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="44" column="39" selection-start-line="44" selection-start-column="39" selection-end-line="44" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+            <element signature="e#289#359#0" />
+            <element signature="e#840#856#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-libriry-ims-page/src/component/shopping/CustomerInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="4" column="15" lean-forward="true" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+          <folding>
+            <element signature="e#1#26#0" expanded="true" />
+            <element signature="e#157#340#0" />
+            <element signature="e#349#365#0" />
+            <element signature="e#529#545#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-libriry-ims-page/src/component/shopping/ShoppingCartBody.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="33" column="31" lean-forward="true" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+          <folding>
+            <element signature="e#1#26#0" expanded="true" />
+            <element signature="e#205#338#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-libriry-ims-page/src/component/shopping/ShoppingCartItem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="25" column="29" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="29" />
+          <folding>
+            <element signature="e#1#26#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -8,11 +8,12 @@ import com.lin.service.QueryBookIntroService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@CrossOrigin(origins = "*",maxAge = 3600)
+@CrossOrigin(origins = {"http://192.168.1.101:3000","http://localhost:3000"},maxAge = 3600)
 @RestController
 public class BookControllerImpl implements BookController {
 
@@ -21,13 +22,14 @@ public class BookControllerImpl implements BookController {
     @Autowired private QueryBookIntroService queryBookIntroService;
 
     //获取书本的基本信息
-    @GetMapping("/infos")
+    @RequestMapping("/infos")
     @Override
     public String getAllInfosAndTags(@RequestParam(required = false) Integer limit,
                                      @RequestParam(required = false) String tagIds,
                                      @RequestParam(required = false) Boolean needTags,
                                      @RequestParam(required = false) String cateJsonStr,
-                                     @RequestParam(required = false) String bookName){
+                                     @RequestParam(required = false) String bookName,
+                                     HttpServletResponse response){
 
         Map<String,Object> categoryMap=new HashMap<>();
 
