@@ -1,28 +1,26 @@
 
 import React from "react"
-import {Row,Col,Input} from "antd"
+import {Row,Col,Input,Radio} from "antd"
 
+const RadioGroup = Radio.Group
 const {TextArea}=Input;
 
 export default class CustomerInfo extends React.Component{
 
-    state={
-        user:{
-            name:"小明",
-            cardId:"123456789",
-            hasBooks:[],
-            record:100,
-            address:"大街"
-        },
-        address:"大街"
-    };
+    constructor(props){
+        super();
+        this.state={
+            user:props.user,
+            address:props.address,
+            isInStrore:false
+        };
+    }
 
     handleAddressChange=(e)=>{
         const val=e.target.value;
-        console.log(val);
         this.setState({
             address:val
-        })
+        },()=>this.props.onAddressChange(val))
     };
 
     handleAddressEnter=(e)=>{
@@ -31,6 +29,14 @@ export default class CustomerInfo extends React.Component{
             address:val
         },()=>this.state.user.address=val)
     };
+
+    handleVisiteChange=(e)=> {
+        const val= e.target.value
+        this.setState({
+            isInStrore:val
+        },()=>this.props.onVisiteChange(val));
+    };
+
 
     render(){
         const user = this.state.user;
@@ -50,6 +56,12 @@ export default class CustomerInfo extends React.Component{
 
                 <Col span={6}>
                     <Row>
+                        <Col>是否配送：
+                            <RadioGroup onChange = {this.handleVisiteChange}  value={this.state.isInStrore}>
+                                <Radio value={false} defaultChecked={true}>是，请送到府上</Radio>
+                                <Radio value={true}>否，我在店中</Radio>
+                            </RadioGroup>
+                          </Col>
                         <Col>家住地址：</Col>
                         <Col style={{marginTop:"10px"}}>
                             <TextArea style={{height:"70px"}} onPressEnter={this.handleAddressEnter} onChange={this.handleAddressChange} value={this.state.address}/>

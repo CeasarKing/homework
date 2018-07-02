@@ -7,8 +7,8 @@ import $ from "jquery"
 class Login extends React.Component {
 
     state={
-        username:"Lin",
-        password:"123456789",
+        username:"",
+        password:"",
         formStyles:[
             {
                 userSpan:"账号",
@@ -23,40 +23,55 @@ class Login extends React.Component {
                 btn2:"hidden"
             }
         ],
-        formStylePos:0
+        formStylePos:0,
+        toHref:"http://localhost:3000/stu"
     };
 
     handleChange=()=>{
         const pos=this.state.formStylePos;
         if (pos===0){
             this.setState({
-                formStylePos:pos+1
+                formStylePos:pos+1,
+                toHref:"http://localhost:3000/admin",
+                username:"",
+                password:""
             })
         } else {
             this.setState({
-                formStylePos:pos-1
+                formStylePos:pos-1,
+                toHref:"http://localhost:3000/stu",
+                username:"",
+                password:""
             })
         }
     };
 
     handleClickLogin=()=>{
+
+        console.log(this.state.toHref);
+
         const un=this.state.username.trim();
         const pw=this.state.password.trim();
 
         if (un!=="" || pw!==""){
+            console.log(un,pw);
+
+            const reactObj = this;
+
             $.ajax({
-                url:"http://192.168.1.101:8080/login",
+                url:window.serverHost + "/login",
                 method:"post",
                 xhrFields:{
                   withCredentials:true
                 },
                 data:{
                     username:un,
-                    password:pw
+                    password:pw,
+                    type : this.state.formStylePos
                 },
                 success:function (resp) {
                     if (resp){
-                        window.location.href = "http://localhost:3000/stu"
+                        window.location.href = reactObj.state.toHref
                     }
                 }
             })
@@ -64,9 +79,7 @@ class Login extends React.Component {
     };
 
     handleInputPressEnter=()=>{
-
         this.handleClickLogin()
-
     };
 
     render() {

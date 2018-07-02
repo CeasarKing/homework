@@ -11,8 +11,8 @@ public interface BookLendedDao {
     //使用id查询某一本已经被借出去的书
     @Select("SELECT * FROM book_lended where bid=#{bid}")
     @Results(id = "lendedBookMapping",value = {
-            @Result(column = "lend_time",property = "lendTime"),
-            @Result(column = "ret_time",property = "retTime"),
+            @Result(column = "lend_date",property = "lendTime"),
+            @Result(column = "ret_date",property = "retTime"),
             @Result(column = "lender_id",property = "lenderId"),
             @Result(column = "bid",property = "book",
                     one = @One(select = "com.lin.dao.BookDao.queryBookById"))
@@ -23,4 +23,7 @@ public interface BookLendedDao {
     @ResultMap("lendedBookMapping")
     List<LendedBook> queryLendBookByStuId(@Param("sid")Integer sid);
 
+    @Select("SELECT * FROM book_lended")
+    @ResultMap(("lendedBookMapping"))
+    List<LendedBook> queryAllBooks();
 }

@@ -1,8 +1,8 @@
 package com.lin.dao;
 
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
+import com.lin.beans.Book;
+import com.lin.dao.provider.BookIntroDaoProvider;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -15,4 +15,6 @@ public interface BookIntroDao {
      @Select("SELECT AUTHOR_INTRO FROM BOOK_INTROS WHERE bid=#{id}")
      List<String> queryAuthorIntros(@Param("id") Integer bid);
 
+     @InsertProvider(type = BookIntroDaoProvider.class,method = "insertBookIntro")
+     int insertBookIntro(Book book);
 }

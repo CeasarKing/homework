@@ -12,9 +12,9 @@ import java.util.Map;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = MainApplication.class)
-public class QueryBookInfoServiceImpl {
+public class BookInfoServiceImpl {
 
-    @Autowired private QueryBookInfoService service;
+    @Autowired private BookInfoService service;
 
     @Test
     public void testGetBooksAndTags(){

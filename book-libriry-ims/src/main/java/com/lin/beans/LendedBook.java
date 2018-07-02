@@ -8,23 +8,23 @@ public class LendedBook extends Book {
     //应当归还的时间
     private String retTime;
     //借走者的id
-    private Integer lenderId;
+    private Integer orderId;
 
     public LendedBook(){}
 
-    public LendedBook(String lendTime, String retTime, Integer lenderId) {
+    public LendedBook(String lendTime, String retTime, Integer orderId) {
         this.lendTime = lendTime;
         this.retTime = retTime;
-        this.lenderId = lenderId;
+        this.orderId = orderId;
     }
 
     public LendedBook(String bookName, String imgSrc, String author,
                       String publicWork, String publicTime, String price, String wrapper, String ISBN, Double averageRank,
-                      int rankNums, List<Double> allRanks, List<String> bookIntro, List<String> authorIntro, String lendTime, String retTime, Integer lenderId) {
+                      int rankNums, List<Double> allRanks, List<String> bookIntro, List<String> authorIntro, String lendTime, String retTime, Integer orderId) {
         super(bookName, imgSrc, author, publicWork, publicTime, price, wrapper, ISBN, averageRank, rankNums, allRanks, bookIntro, authorIntro);
         this.lendTime = lendTime;
         this.retTime = retTime;
-        this.lenderId = lenderId;
+        this.orderId = orderId;
     }
 
     public void setBook(Book book) {
@@ -37,7 +37,7 @@ public class LendedBook extends Book {
                 "bookId="+super.getbId()+
                 ", lendTime=" + lendTime +
                 ", retTime=" + retTime +
-                ", lenderId=" + lenderId +
+                ", lenderId=" + orderId +
                 '}';
     }
 
@@ -60,11 +60,11 @@ public class LendedBook extends Book {
     }
 
     public Integer getLenderId() {
-        return lenderId;
+        return orderId;
     }
 
-    public LendedBook setLenderId(Integer lenderId) {
-        this.lenderId = lenderId;
+    public LendedBook setLenderId(Integer orderId) {
+        this.orderId = orderId;
         return this;
     }
 }

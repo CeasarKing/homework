@@ -2,49 +2,112 @@ import React from "react"
 import moment from 'moment';
 import {Form,Select,Layout,Row,Col,Input,InputNumber,DatePicker,Button,Upload,Icon,notification} from "antd"
 
+import $ from "jquery"
 
-const {Content,Sider}=Layout
 const {Item} =Form;
-const {Option}=Select
+const {Option}=Select;
+
 
 class MyForm extends React.Component{
 
-    state={
+    constructor(props){
+        super();
+        this.state = {
+            formInfo:{}
+        };
+        this.resetFields = props.form.resetFields;
+        this.getFieldDecorator = props.form.getFieldDecorator;
+    }
 
+    
+    handleSubmitData = (data) =>{
+        $.ajax({
+            url:window.serverHost + "/add",
+            data:data,
+            method:"post",
+            xhrFields:{
+                withCredentials:true
+            },
+            success:function (resp) {
+                console.log(resp)
+            }
+        })
     };
 
     handleFormSubmit=(e)=>{
         e.preventDefault();
+
         this.props.form.validateFields((err,vals)=>{
             if (!err){
-                console.log("err:",vals)
+                 const date = vals.publishDate;
+                 const dateStr = new Date(date.toLocaleString()).toLocaleDateString()
+                     .replace("/","-").replace("/","-");
+
+                 console.log(vals);
+
+                 vals.bId = vals.isbn;
+                 vals.publicWork = vals.publishWork;
+                 vals.publicTime = dateStr;
+
+                 vals.publishDate = undefined;
+                 vals.publishWork = undefined;
+
+
+                 this.handleSubmitData(vals)
             }
         })
     };
 
     handleModeSelectChange=(v,k)=>{
-        console.log(v)
+        console.log(v);
         console.log(k)
     };
 
     handleDatePicker=(v,k)=>{
-        console.log(v)
+        console.log(new Date(v.toLocaleString()).toLocaleDateString());
         console.log(k)
-    }
+    };
 
-    onPriceChange=(v,k)=>{
-        console.log(v)
-        console.log(k)
-    }
 
+    handleReset = ()=>{
+        this.resetFields()
+    };
+
+    //使用ajax访问服务器判断这个东西是否已经存在
+    handleAjaxQuery=(type,val)=>{
+        let res=null;
+        $.ajax({
+            url:window.serverHost + "/exsit",
+            data:{
+                type:type,
+                value:val
+            },
+            method:"get",
+            xhrFields:{
+                withCredentials:true
+            },
+            async:false,
+            success:function (resp) {
+                console.log(resp);
+                res=resp
+            }
+        });
+        return res
+    };
+    //应该使用onPressEnter函数和onbuar  只在输入完成调用
+    queryExsitValidator = (type,rules,value,callback)=>{
+        if (this.handleAjaxQuery(type,value)){
+            callback("这本书已经在库中了，请在添加已有图书中添加")
+        }else {
+            callback()
+        }
+    };
 
     render(){
         const formItemLayout = {
             labelCol: { span: 6 },
             wrapperCol: { span: 14 },
         };
-
-        const { getFieldDecorator } = this.props.form;
 
         return<Form style={{width: "500px"}} onSubmit={this.handleFormSubmit}>
             <Item
@@ -65,13 +128,15 @@ class MyForm extends React.Component{
                 label={"ISBN"}
                 hasFeedback
             >
-                {getFieldDecorator("input1",{
+                {this.getFieldDecorator("isbn",{
                     rules:[
                         {required:true,message:"请录入书号"},
-                        {max:20,message:"书名最多输入20个字符"}
+                        {max:20,message:"书名最多输入20个字符"},
+                        {validator:this.queryExsitValidator.bind(this,"isbn")}
                     ],
                 })(
-                    <Input size={"small"} style={{width: 180}} placeholder={"输入书号"}/>
+                    <Input size={"small"} name={"in"}
+                           style={{width: 180}} placeholder={"输入书号"}/>
                 )}
             </Item>
 
@@ -81,10 +146,11 @@ class MyForm extends React.Component{
                 label={"书名"}
                 hasFeedback
             >
-                {getFieldDecorator("input2",{
+                {this.getFieldDecorator("bookName",{
                     rules:[
                         {required:true,message:"请输入书名！"},
-                        {max:20,message:"书名最多输入20个字符"}
+                        {max:20,message:"书名最多输入20个字符"},
+                        {validator:this.queryExsitValidator.bind(this,"name")}
                     ]
                 })(
                     <Input size={"small"} style={{width: 180}} placeholder={"输入图书名字"}/>
@@ -97,7 +163,7 @@ class MyForm extends React.Component{
                 label={"作者"}
                 hasFeedback
             >
-                {getFieldDecorator("input3",{
+                {this.getFieldDecorator("author",{
                     rules:[
                         {required:true,message:"请录入作者!"},
                         {max:50,message:"作者最多输入50个字符"}
@@ -113,13 +179,13 @@ class MyForm extends React.Component{
                 hasFeedback
                 label={"价格"}
             >
-                {getFieldDecorator("input4",{
+                {this.getFieldDecorator("price",{
                     rules:[
                         {required:true,message:"请录入价格!"},
                      //   {min:0,message:"价格不可小于0"}
                     ]
                 })(
-                    <InputNumber onChange={this.onPriceChange}  precision={2} size={"small"}
+                    <InputNumber precision={2} size={"small"}
                                  style={{width: 180}} placeholder={"输入价格"}/>
                 )}
             </Item>
@@ -130,7 +196,7 @@ class MyForm extends React.Component{
                 hasFeedback
                 label={"出版社"}
             >
-                {getFieldDecorator("input5",{
+                {this.getFieldDecorator("publishWork",{
                     rules:[
                         {max:50,message:"最大字符长度为50!"}
                     ]
@@ -145,9 +211,12 @@ class MyForm extends React.Component{
                 hasFeedback
                 label={"出版时间"}
             >
-                <DatePicker size={"small"} style={{width: 180}} onChange={this.handleDatePicker}
-                            placeholder={"选择出版时间"} disabledDate={(current)=>  current && current> moment().endOf('day')}/>
-
+                {this.getFieldDecorator("publishDate",{
+                    })(
+                    <DatePicker size={"small"} style={{width: 180}} onChange={this.handleDatePicker}
+                                placeholder={"选择出版时间"}
+                                disabledDate={(current)=>  current && current> moment().endOf('day')}/>
+                )}
             </Item>
 
             <Item
@@ -156,7 +225,7 @@ class MyForm extends React.Component{
                 hasFeedback
                 label={"图书简介"}
             >
-                {getFieldDecorator("ta1",{
+                {this.getFieldDecorator("bookIntro",{
                     rules:[
                         {max:500,message:"最长为500字"},
                     ]
@@ -171,7 +240,7 @@ class MyForm extends React.Component{
                 hasFeedback
                 label={"作者简介"}
             >
-                {getFieldDecorator("ta2",{
+                {this.getFieldDecorator("authorIntro",{
                     rules:[
                         {max:500,message:"最长为500字"},
                     ]
@@ -186,7 +255,6 @@ class MyForm extends React.Component{
                 hasFeedback
                 label={"封面"}
             >
-
                 <Upload name="logo" action="" listType="picture">
                     <Button>
                         <Icon type="upload"/> 上传
@@ -199,7 +267,7 @@ class MyForm extends React.Component{
                 labelCol={{span: 5}}
                 hasFeedback
             >
-                <Button  style={{marginLeft: "80px"}} type="primary" >重置</Button>
+                <Button  style={{marginLeft: "80px"}} onClick={this.handleReset} type="primary" >重置</Button>
                 <Button  style={{marginLeft: "40px"}} type="primary" htmlType="submit">提交</Button>
             </Item>
 
@@ -218,7 +286,7 @@ export default class BookAdder extends React.Component{
             message:msg,
             description:dsp
         })
-    }
+    };
 
     render(){
         const WrapperForm = Form.create()(MyForm);

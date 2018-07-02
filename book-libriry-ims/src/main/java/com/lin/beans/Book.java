@@ -206,7 +206,7 @@ public class Book {
         return this;
     }
 
-    public double getAverageRank() {
+    public Double getAverageRank() {
         return averageRank;
     }
 

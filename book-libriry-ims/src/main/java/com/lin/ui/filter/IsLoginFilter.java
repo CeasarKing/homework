@@ -20,7 +20,7 @@ public class IsLoginFilter extends GenericFilterBean {
 
         //两个用于登陆的连接
         String exincludeUrl1 = "http://localhost:8080/login";
-        String exincludeUrl2 = "http://192.168.1.101:8080/login";
+        String exincludeUrl2 = "http://192.168.1.102:8080/login";
         //一个获取图片的连接
         String exincludeUrl3 = "http://localhost:8080/img/";
 

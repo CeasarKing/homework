@@ -20,7 +20,7 @@ public interface StudentForUserDao {
             "max_lend_item as maxLendItem," +
             "age,gender " +
             "from book_student " +
-            "where name=#{un} and password = #{pw}")
-    Student login(@Param("un") String username, @Param("pw") String password);
+            "where name=#{un} and password = #{pw} and type = #{type}")
+    Student login(@Param("un") String username, @Param("pw") String password,@Param("type")Integer type);
 
 }

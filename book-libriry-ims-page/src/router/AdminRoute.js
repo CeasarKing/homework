@@ -17,6 +17,7 @@ const AdminRoute =()=>(
         <Route path={"/admin/addu"} component={StudentAdder}/>
         <Route path={"/admin/delu"} component={StudentDeller}/>
         <Route path={"/admin/led"} component={MessageOfLend}/>
+            <Route path={"/admin/ret"}/>
     </div>
 )
 

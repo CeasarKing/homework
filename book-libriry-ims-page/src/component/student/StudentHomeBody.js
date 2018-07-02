@@ -2,12 +2,17 @@ import React from "react"
 
 import {Layout,Affix,notification} from "antd"
 
+import createHisoty from "history/createBrowserHistory"
+
+
 import NormalHeader from "./NomalHeader"
 import SearchInput from "./SearchInput"
 import CategoryList from "./CategoryList";
 import ShowBookList from "./ShowBookList";
 import CategorySearch from "./CategorySearch";
 import $ from "jquery";
+
+import AjaxUtils from "../../utils/AjaxUtils"
 
 const {Sider,Content,Header}=Layout;
 
@@ -17,6 +22,8 @@ export default class StudentHomeBody extends React.Component{
         super();
         const user =this.preGetUser();
         const booksData = this.preGetData();
+
+        console.log(props);
 
         this.state={
             scrollH:"200px",
@@ -28,11 +35,14 @@ export default class StudentHomeBody extends React.Component{
             shopingItems:{}
         };
     }
-    //得到数据
+    //加载书本的数据
     preGetData=()=>{
-        let resData=null;
-        $.ajax({
-            url:"http://192.168.1.101:8080/infos",
+        const data={
+            limit:50,
+            needTags:true
+        };
+        /*$.ajax({
+            url:window.serverHost + "/infos",
             data:{
                 limit:50,
                 needTags:true
@@ -43,30 +53,18 @@ export default class StudentHomeBody extends React.Component{
             method:"get",
             async:false,
             success: (data)=> {
-                const dataObj = $.parseJSON(data);
-                resData=dataObj
+                resData = $.parseJSON(data)
             },
             error:(data)=>{
                 console.log(data)
             }
-        });
-        return resData;
+        });*/
+        return AjaxUtils.getBookInfo(data);
     };
 
+    //加载登陆的用户的信息
     preGetUser=()=>{
-        let user = null;
-        $.ajax({
-            url:"http://192.168.1.101:8080/get/user",
-            method:"get",
-            xhrFields:{
-              withCredentials:true
-            },
-            async:false,
-            success:function (resp) {
-                user=JSON.parse(resp)
-            },
-        });
-        return user;
+        return AjaxUtils.getNowUserInfo();
     };
 
     gethw=(h,l)=>{
@@ -90,7 +88,7 @@ export default class StudentHomeBody extends React.Component{
         console.log(val)
 
         $.ajax({
-            url:"http://192.168.1.101:8080/infos",
+            url:window.serverHost + "/infos",
             method:"get",
             xhrFields:{
                 withCredentials:true
@@ -114,7 +112,7 @@ export default class StudentHomeBody extends React.Component{
         let newData = []
 
         const tagIds=JSON.stringify(selectArr)
-        $.ajax("http://192.168.1.101:8080/infos",{
+        $.ajax(window.serverHost + "/infos",{
             method:"get",
             xhrFields:{
                 withCredentials:true
@@ -134,7 +132,7 @@ export default class StudentHomeBody extends React.Component{
     //当点击搜索的时候的回调函数
     onInputSearch=(search)=>{
         $.ajax({
-            url:"http://192.168.1.101:8080/infos",
+            url:window.serverHost + "/infos",
             method:"get",
             xhrFields:{
                 withCredentials:true
@@ -149,6 +147,7 @@ export default class StudentHomeBody extends React.Component{
             }
         })
     };
+
     //当点击添加购物车的时候
     onClickAddCart=(book)=>{
 
@@ -157,13 +156,33 @@ export default class StudentHomeBody extends React.Component{
             this.setState({
                 badgeCount : count
             });
-            this.state.shopingItems[book.bId] = book
 
-            const notifyMsg="你已经将 " + book.bookName + " 成功添加到书篮中了"
-            notification.open({
-                message:"添加成功",
-                description:notifyMsg
-            })
+            this.state.shopingItems[book.bId] = book;
+
+            $.ajax({
+               url:window.serverHost + "/order/add",
+               data:{
+                   bid:book.bId
+               } ,
+               xhrFields:{
+                   withCredentials:true
+               },
+                method:"get",
+                success:function (resp) {
+                   if (resp){
+                       const notifyMsg="你已经将 " + book.bookName + " 成功添加到书篮中了";
+                       notification.open({
+                           message:"添加成功",
+                           description:notifyMsg
+                       })
+                   } else {
+                       notification.open({
+                           message:"添加失败",
+                           description:"只能添加一本,请不要重复添加"
+                       })
+                   }
+                }
+            });
 
         }else {
             notification.open({
@@ -173,15 +192,29 @@ export default class StudentHomeBody extends React.Component{
         }
 
     };
+
     //当点击直接购买的时候
     onClickShopping=(book)=>{
-        console.log(book)
+        alert("别买  你没钱")
+    };
+
+    //当点击到购物车提交的时候
+    handleSendToCart=()=>{
+        console.log("go to cart");
+        const history = createHisoty({forceRefresh:true});
+        history.push({
+            pathname:"/cart",
+            state:{
+                books:this.state.shopingItems,
+                user:this.state.user
+            }
+        })
     };
 
     render(){
         return(
             <div style={this.state.divStyle===undefined?{}:this.state.divStyle}>
-                <NormalHeader gethw={this.gethw} user={this.state.user} count={this.state.badgeCount}/>
+                <NormalHeader onSendToCart={this.handleSendToCart}  gethw={this.gethw} user={this.state.user} count={this.state.badgeCount}/>
 
                 <SearchInput onSearch={this.onInputSearch}/>
 
@@ -198,7 +231,7 @@ export default class StudentHomeBody extends React.Component{
                                          }
                                 <Affix> <CategoryList tags={this.state.booksData.tags} onSelect={this.onSelectCategory}/> </Affix>
                             </Sider>
-                            <Content style={{background:"#Fff"}}>
+                            <Content style={{background:"#fff"}}>
                                     {//--右边的显示列表-->
                                          }
                                 <div >

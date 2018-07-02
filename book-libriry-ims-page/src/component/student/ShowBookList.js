@@ -59,7 +59,7 @@ export default class ShowBookList extends React.Component{
 
         let modalItem = null;
         $.ajax({
-            url:"http://192.168.1.101:8080/one",
+            url: window.serverHost + "/one",
             data:{
                 bookName:bname
             },

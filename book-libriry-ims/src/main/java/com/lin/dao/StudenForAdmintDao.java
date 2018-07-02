@@ -8,7 +8,7 @@ import java.util.List;
 @Mapper
 public interface StudenForAdmintDao {
 
-    @Select("SELECT * FROM book_student")
+    @Select("SELECT * FROM book_student where type=0")
     @Results(id = "studentMapping",value = {
             @Result(column = "id",property = "id"),
             @Result(column = "card_id",property = "cardId"),

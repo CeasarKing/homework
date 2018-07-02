@@ -29,10 +29,12 @@ const preRenderDom=()=>{
     $.ajaxSetup({
         complete:function (XMLRequets,status) {
             if (XMLRequets.status===403){
-                //window.location.href = "http://localhost:3000"
+                window.location.href = "http://localhost:3000"
             }
         }
     })
+
+    window.serverHost = "http://192.168.1.102:8080"
 
 };
 

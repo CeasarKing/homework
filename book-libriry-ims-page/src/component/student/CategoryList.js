@@ -1,7 +1,5 @@
 import React from "react"
 
-import $ from "jquery"
-
 import {Tree} from "antd"
 const {TreeNode}=Tree
 

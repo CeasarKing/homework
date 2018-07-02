@@ -1,29 +1,28 @@
 import React from "react"
 
-import {Table,Select,Input,Button,Icon,Row,Col,Tooltip}from "antd"
+import {Table,Select,Input,Button,Icon,Row,Col,Tooltip,Dropdown,Menu}from "antd"
+import AjaxUtils from "../../../utils/AjaxUtils";
 
 const {Option}=Select;
-const {Group}=Input
+const {Group}=Input;
 
 export default class StudentAdmin extends React.Component{
 
-    state={
-        data:[
-            {id:"12457854",name:"张三",card:"5116021962685871",age:12,gender:1,maxLend:5,hasGet:[{id:"2352342",name:"神奇女侠"},{id:"4575674",name:"会赚钱的妈妈"}]},
-            {id:"12457854",name:"张三",card:"5116021962685871",age:12,gender:1,maxLend:5,hasGet:[{id:"2352342",name:"神奇女侠"},{id:"4575674",name:"会赚钱的妈妈"}]},
-            {id:"12457854",name:"张三",card:"5116021962685871",age:12,gender:1,maxLend:5,hasGet:[{id:"2352342",name:"神奇女侠"},{id:"4575674",name:"会赚钱的妈妈"}]},
-            {id:"12457854",name:"张三",card:"5116021962685871",age:12,gender:1,maxLend:5,hasGet:[{id:"1253252",name:"莫斯科绅士"},{id:"4575674",name:"会赚钱的妈妈"}]},
-            {id:"12457854",name:"张三",card:"5116021962685871",age:12,gender:1,maxLend:5,hasGet:[{id:"1253252",name:"莫斯科绅士"},{id:"4575674",name:"会赚钱的妈妈"}]},
-            {id:"12457854",name:"张三",card:"5116021962685871",age:12,gender:1,maxLend:5,hasGet:[{id:"1253252",name:"莫斯科绅士"},{id:"4575674",name:"会赚钱的妈妈"}]},
-        ],
-        dataTemp:undefined,
-        nameInputVis:false,
-        cardInputVis:false,
-        nameInputText:"",
-        cardInputText:"",
+    constructor(props){
+        super();
+        const data = AjaxUtils.getAllStudents();
+        console.log(data);
+        this.state = {
+            data:data,
+            dataTemp:data,
+            nameInputVis:false,
+            cardInputVis:false,
+            nameInputText:"",
+            cardInputText:"",
 
-        nameSearchText:"查出包含输入的姓名",
-    };
+            nameSearchText:"查出包含输入的姓名",
+        };
+    }
 
     tableChange=()=>{
 
@@ -36,8 +35,10 @@ export default class StudentAdmin extends React.Component{
     };
 
     nameSubmit=()=>{
-        console.log(this.state.nameInputText)
+        const temp = this.state.data.filter(item=>item.name == this.state.nameInputText);
+        console.log(temp)
         this.setState({
+            dataTemp:temp,
             nameInputVis:false
         })
     };
@@ -49,8 +50,9 @@ export default class StudentAdmin extends React.Component{
     };
 
     cardSubmit=()=>{
-        console.log(this.state.cardInputText)
+        const temp = this.state.data.filter(item=>item.card == this.state.cardInputText);
         this.setState({
+            dataTemp:temp,
             cardInputVis:false
         })
     };
@@ -67,10 +69,28 @@ export default class StudentAdmin extends React.Component{
         }
     };
 
+    handleClickAlert=(uid)=>{
+
+    };
+
+    handleClickCheck=(uid)=>{
+
+    };
+
+    handleClickDeleteUser=(uid)=>{
+        const data = this.state.data;
+        for (let i=0;i<data.length ;i++){
+            if (data[i].id === uid){
+                data.splice(i,1);
+                this.setState({data:data});
+                break
+            }
+        }
+    };
 
     render(){
 
-        if (this.state.dataTemp==undefined){
+        if (this.state.dataTemp===undefined){
             const data=this.state.data;
             this.setState({
                 dataTemp:data
@@ -112,7 +132,7 @@ export default class StudentAdmin extends React.Component{
                 filterDropdown:(
                     <div style={{width:"200px"}}>
                         <Tooltip placement={"bottom"} title={"尽可能查出更精确的结果"}>
-                            <Input value={this.state.nameInputText} size={"small"} style={{width:"150px"}}
+                            <Input value={this.state.cardInputText} size={"small"} style={{width:"150px"}}
                                    placeholder="输入身份证号" onChange={this.cardChange} onPressEnter={this.cardSubmit}/>
                         </Tooltip>
                         <Button type={"primary"}  size={"small"} onClick={this.cardSubmit}>查找</Button>
@@ -136,12 +156,12 @@ export default class StudentAdmin extends React.Component{
                 key: "gender",
                 dataIndex: "gender",
                 title: "性别",
-                render: item => <span>{item == 0 ? "女" : "男"}</span>,
+                render: item => <span>{item === 0 ? "女" : "男"}</span>,
                 filterMultiple:false,
                 filters: [
                     {text: "男", value: 1},
                     {text: "女", value: 0}],
-                onFilter: (item, record) => item == record.gender,
+                onFilter: (item, record) => item === record.gender,
             },
             {
                 key:"maxLend",
@@ -153,11 +173,11 @@ export default class StudentAdmin extends React.Component{
                 dataIndex:"hasGet",
                 title:"已经借阅的",
                 render:item=>(
-                    <Select defaultValue={item[0].id}>
+                    <Select defaultValue={item[0].bId}>
                         {
                             item.map((k,i)=>(
-                                <Option key={k.id} value={k.id}>
-                                    {k.name}(id:{k.id})
+                                <Option key={k.bId} value={k.bId}>
+                                    {k.bookName}(id:{k.bId})
                                 </Option>
                             ))
                         }
@@ -168,20 +188,25 @@ export default class StudentAdmin extends React.Component{
                 key:"action",
                 dataIndex:"action",
                 title:"操作",
-                render:item=>(
-                    <Select style={{width:"80px"}} defaultValue={"操作"}>
-                        <Option value={"alert"}>
-                            提醒还书
-                        </Option>
-                        <Option value={"peek"}>
-                            查看记录
-                        </Option>
-                    </Select>
-                )
+                render:(item,record)=>(
+                        <Dropdown overlay={
+                            <Menu>
+                                <Menu.Item><a target={"_blank"}
+                                              onClick={this.handleClickAlert.bind(this,record.id)}>提醒还书</a></Menu.Item>
+                                <Menu.Item><a target={"_blank"}
+                                              onClick={this.handleClickCheck.bind(this,record.id)}>查看借阅</a></Menu.Item>
+                                <Menu.Item><a target={"_blank"}
+                                              onClick={this.handleClickDeleteUser.bind(this,record.id)}>删除用户</a></Menu.Item>
+                            </Menu>}>
+                            <a className={"ant-dropdown-link"}>
+                                操作<Icon type={"down"}></Icon>
+                            </a>
+                        </Dropdown>
+                    )
             }
         ];
 
-        const tableTag=<Table dataSource={this.state.data} columns={columns}  size={"small"}  onChange={this.tableChange} />
+        const tableTag=<Table dataSource={this.state.dataTemp} columns={columns}  size={"small"}  onChange={this.tableChange} />
 
         const inputTag=<Row>
                 <Col>

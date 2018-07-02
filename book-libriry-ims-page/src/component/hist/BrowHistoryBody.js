@@ -12,9 +12,7 @@ export default class BrowHistoryBody extends React.Component{
 
 
     };
-
     render(){
-
         return(<div>
           <NormalHeader>
               <Layout style={{background:"#fff"}}>

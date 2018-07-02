@@ -3,14 +3,34 @@ import {Menu,Icon,Layout} from "antd"
 import AdminRoute from "../../router/AdminRoute"
 
 import {Link} from "react-router-dom"
+import AjaxUtils from "../../utils/AjaxUtils";
 
 const {SubMenu,Item}=Menu;
 const {Content,Sider}=Layout;
 
 export default class AdminBody extends React.Component{
 
-    state={
+    constructor(props){
+        super();
 
+        const admin= this.preGetAdmin();
+
+        this.state={
+            admin:admin,
+        };
+    }
+
+    //第一次默认的图书的加载
+    preGetBooks=()=>{
+        const  data={
+            limit:50,
+            needTags:false
+        };
+        return AjaxUtils.getBookInfo(data)
+    };
+    //得到当前登陆的管理员的信息
+    preGetAdmin=()=>{
+        return AjaxUtils.getNowUserInfo();
     };
 
     handleClick=()=>{

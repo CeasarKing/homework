@@ -10,35 +10,9 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 
-@CrossOrigin(origins = "*")
-@Controller
-public class ImgController {
+public interface ImgController {
 
-    @RequestMapping("/img/{bid}")
-    public void getImg(@PathVariable("bid")Integer bid, HttpServletResponse response){
-        FileInputStream fis=null;
-        try {
-            fis=new FileInputStream("F:/file/img/"+bid+".jpg");
 
-            OutputStream os =response.getOutputStream();
-
-            int len=0;
-            byte[]buf=new byte[1024];
-            while ((len=fis.read(buf))>0){
-                os.write(buf,0,len);
-            }
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }finally {
-            if (fis!=null){
-                try {
-                    fis.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    }
+     void getImg(Integer bid, HttpServletResponse response);
 
 }

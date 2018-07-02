@@ -78,27 +78,36 @@ public interface BookDao {
     @Select("SELECT rank1,rank2,rank3,rank4,rank5 from book_info where bid=#{bid}")
     List<Double> queryRanksById(@Param("bid") Integer bid);
 
+    @Insert("INSERT INTO book_info(bid,bname,bauthor,price,public_work,public_time) " +
+            "VALUES(#{bId},#{bookName},#{author},#{price},#{publicWork},#{publicTime})")
+    int insertBook(Book book);
+
     /**
      * 为了准备数据使用的一次性代码
      */
+    @Deprecated
     @Select("SELECT intro from book_info where bname = #{name}")
     String queryIntro(@Param("name") String name);
 
+    @Deprecated
     @Update("update book_info set img =#{img} where bid=#{id} ")
     int updateImg(@Param("id") String bid,@Param("img") String img);
 
+    @Deprecated
     @InsertProvider(type = BookDaoProvider.class,method = "insertBooks")
     int insertBooks(Book books);
 
+    @Deprecated
     @Select("SELECT COUNT(*) FROM book_info WHERE bname=#{name}")
     int queryBookCountByName(@Param("name") String name);
 
+    @Deprecated
     @Update("UPDATE book_info " +
             "SET tags = #{tags}" +
             "WHERE bname=#{name}")
     int updateCategory(@Param("tags") String tags,@Param("name")String bookName);
 
-
+    @Deprecated
     @Select("SELECT bid as bId,tags as tags FROM book_info")
     List<Book> queryAllIdAndTag();
 

@@ -1,4 +1,4 @@
-package com.lin.dao;
+package com.lin.service;
 
 import com.lin.MainApplication;
 import org.junit.Test;
@@ -7,16 +7,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-@SpringBootTest(classes = MainApplication.class)
 @RunWith(SpringJUnit4ClassRunner.class)
-public class StudentForUserDaoTest {
+@SpringBootTest(classes = MainApplication.class)
+public class UserServiceTest2 {
 
-    @Autowired
-    private StudentForUserDao studentForUserDao;
+    @Autowired private UserService studentService;
 
     @Test
     public void testLogin(){
-        System.out.println(studentForUserDao.login("Lin", "123456789",0));
+        System.out.println(studentService.login("Lin","123456789", 0));
     }
+
 
 }

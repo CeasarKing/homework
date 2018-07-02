@@ -7,8 +7,7 @@ import com.lin.beans.Book;
 import com.lin.beans.Tag;
 import com.lin.dao.BookDao;
 import com.lin.dao.TagsDao;
-import com.lin.service.QueryBookInfoService;
-import com.mysql.jdbc.Blob;
+import com.lin.service.BookInfoService;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -22,11 +21,10 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import javax.sql.DataSource;
 import java.io.*;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -47,7 +45,6 @@ public class ScrawForExecuteOnce {
         BufferedWriter bw=new BufferedWriter(new FileWriter("f:\\file/html/cateList.html"));
         bw.write(body.html());
         bw.close();
-
     }
 
     @Test
@@ -543,10 +540,10 @@ public class ScrawForExecuteOnce {
 
 
     @Autowired private DataSource dataSource;
-    @Autowired private QueryBookInfoService queryBookInfoService;
+    @Autowired private BookInfoService bookInfoService;
     @Test public void saveIntro() throws SQLException {
 
-        List<Book> books= (List<Book>) queryBookInfoService.getAllInfosAndTags().get("books");
+        List<Book> books= (List<Book>) bookInfoService.getAllInfosAndTags().get("books");
         java.sql.Connection connection=dataSource.getConnection();
 
         PreparedStatement ps = connection.prepareStatement("UPDATE BOOK_INFO SET intro = ? WHERE bname = ?");
@@ -605,5 +602,29 @@ public class ScrawForExecuteOnce {
         System.out.println(dao.queryBookByName("我偏爱那些不切实际的浪漫").getBookIntro().size());
     }
 
+
+    @Test
+    public void testUpdatePrice() throws SQLException {
+        java.sql.Connection connection = dataSource.getConnection();
+
+        String sql1="SELECT bid from book_info";
+        Statement statement=connection.createStatement();
+        ResultSet resultSet = statement.executeQuery(sql1);
+        List<Integer> ids= new ArrayList<>();
+        while (resultSet.next()){
+            ids.add(resultSet.getInt(1));
+        }
+        System.out.println(ids);
+
+        String sql2="update book_info set price = format(rand()*60+20,2) where bid = ?";
+
+        PreparedStatement stat = connection.prepareStatement(sql2);
+
+        for (Integer i : ids){
+            stat.setInt(1,i);
+            stat.execute();
+        }
+
+    }
 
 }

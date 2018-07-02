@@ -1,13 +1,16 @@
 package com.lin.service.impl;
 
 import com.lin.beans.Book;
+import com.lin.beans.LendedBook;
 import com.lin.beans.Tag;
 import com.lin.dao.BookDao;
 import com.lin.dao.BookIntroDao;
+import com.lin.dao.BookLendedDao;
 import com.lin.dao.TagsDao;
-import com.lin.service.QueryBookInfoService;
+import com.lin.service.BookInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.HashMap;
 import java.util.List;
@@ -15,10 +18,19 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 @Service
-public class QueryBookInfoServiceImpl implements QueryBookInfoService {
+public class BookInfoServiceImpl implements BookInfoService {
 
-    @Autowired private BookDao bookDao;
-    @Autowired private TagsDao tagsDao;
+    private final BookDao bookDao;
+    private final TagsDao tagsDao;
+    private final BookLendedDao bookLendedDao;
+    private final BookIntroDao bookIntroDao;
+    @Autowired
+    public BookInfoServiceImpl(BookDao bookDao, TagsDao tagsDao, BookLendedDao bookLendedDao, BookIntroDao bookIntroDao) {
+        this.bookDao = bookDao;
+        this.tagsDao = tagsDao;
+        this.bookLendedDao = bookLendedDao;
+        this.bookIntroDao = bookIntroDao;
+    }
 
     @Override
     public Map<String, Object> getAllInfosAndTags() {
@@ -61,6 +73,35 @@ public class QueryBookInfoServiceImpl implements QueryBookInfoService {
             book=bookDao.queryBookById(bid);
         }
         return book;
+    }
+
+    @Override
+    public List<LendedBook> getAllLendBooks() {
+        return bookLendedDao.queryAllBooks();
+    }
+
+    @Override
+    public boolean getBookExsit(String type, String value) {
+        if (type.equals("name")){
+            return bookDao.queryBookByName(value)!=null;
+        }else if (type.equals("isbn")){
+            try {
+                return bookDao.queryBookById(Integer.valueOf(value)) != null;
+            }catch (NumberFormatException e){e.printStackTrace();}
+        }
+        return false;
+    }
+
+    @Transactional
+    @Override
+    public boolean addBook(Book book) {
+
+        //将图书的信息添加到基本表中
+        int count=0;
+        count += bookDao.insertBook(book);
+        count += bookIntroDao.insertBookIntro(book);
+
+        return count == 2;
     }
 
 

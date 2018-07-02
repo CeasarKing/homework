@@ -8,10 +8,10 @@ class BookPopover extends React.Component{
     constructor(props){
         super();
         const intro = this.preGetBookIntro("book",props.book.index);
-        const realIntro=[]
-        let count=0
+        const realIntro=[];
+        let count=0;
 
-        console.log(intro)
+        console.log(intro);
 
         for (let i in intro){
             let len = intro[i].length;
@@ -19,9 +19,9 @@ class BookPopover extends React.Component{
                 count+=len;
                 realIntro.push(intro[i])
             } else {
-                const subLen = count>100?50 : 150-count
-                const str = intro[i].substr(0,subLen)+"....."
-                realIntro.push(str)
+                const subLen = count>100?50 : 150-count;
+                const str = intro[i].substr(0,subLen)+".....";
+                realIntro.push(str);
                 break
             }
         }
@@ -39,7 +39,7 @@ class BookPopover extends React.Component{
     preGetBookIntro=(type,bid)=>{
         let respObj=null;
         $.ajax({
-            url:"http://192.168.1.101:8080/intros",
+            url:window.serverHost + "/intros",
             data:{
                 type:type,
                 bid:bid

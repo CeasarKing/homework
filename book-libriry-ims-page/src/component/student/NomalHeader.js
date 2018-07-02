@@ -1,7 +1,8 @@
 import React from "react"
+import {Link}from"react-router-dom"
 import {Menu,Icon,Badge}from "antd"
 
-const {SubMenu,ItemGroup,Item}=Menu
+const {SubMenu,ItemGroup,Item}=Menu;
 
 export default class StudentHome extends React.Component {
 
@@ -16,7 +17,6 @@ export default class StudentHome extends React.Component {
         this.setState({
             currKey: e.key
         })
-
     };
 
     componentWillMount (){
@@ -61,12 +61,12 @@ export default class StudentHome extends React.Component {
                         mode={"horizontal"}>
 
                         <Item key={"store"}>
-                            <Icon type={"book"}/>藏书
+                            <Link to={"/stu"}><Icon type={"book"}/>藏书</Link>
                         </Item>
 
 
                         <Item key={"history"}>
-                            <Icon type="eye"/> 借阅历史
+                            <Link to={"/his"}><Icon type="eye"/> 借阅历史</Link>
                         </Item>
 
                         <SubMenu key={"rank"} title={<span><Icon type="line-chart"/> 借阅排行</span>}>
@@ -92,12 +92,12 @@ export default class StudentHome extends React.Component {
                         </Item>
 
                         <Menu.Item key={"user"} style={{float: 'right'}}>
-                            <Icon type={"user"}/>{user!=null&&user!=undefined ? user.name:"个人中心"}
+                            <Icon type={"user"}/>{user!=null&&user!==undefined ? user.name:"个人中心"}
                         </Menu.Item>
 
                         <Menu.Item key={"shopping"} style={{float: 'right'}}>
-                            <Icon type={"shopping-cart"}/>书篮
-                            <Badge count={this.state.badgeCount}  overflowCount={99}/>
+                            <a onClick={()=>this.props.onSendToCart()}><Icon type={"shopping-cart"}/>书篮
+                                <Badge count={this.state.badgeCount}  overflowCount={99}/></a>
                         </Menu.Item>
 
                     </Menu><br/>
